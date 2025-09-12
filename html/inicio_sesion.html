@@ -4,22 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio sesion</title>
-  <!-- hoja de estilo  css personalizada-->
+  <title>Inicio sesión - Level Up Gamer</title>
+
+  <!-- CSS personalizado -->
   <link rel="stylesheet" href="../css/stylesheet-inicio-sesion.css" />
-
-  <!-- hoja de estilo boostrap y js -->
+  <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css" />
+  <link rel="stylesheet" href="../css/stylesheet-html-body.css" />
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
-  <!-- style navbar -->
-  <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css">
 
-  <!-- Latest compiled JavaScript -->
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <!-- regla de negocio validacion inicio sesion -->
-  <script src="js/validacion-inicio-sesion.js"></script>
+  <!-- JS -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/validacion-inicio-sesion.js"></script>
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-sm navbar-dark navbar-custom">
     <div class="container-fluid">
       <img src="../img/icon/iconlogo.ico" alt="Avatar Logo" style="width: 40px" class="rounded-pill" />
@@ -36,7 +35,9 @@
       </div>
     </div>
   </nav>
-  <form action="action_page.php" method="post">
+
+  <!-- Formulario de inicio de sesión -->
+  <form>
     <div class="imgcontainer">
       <img src="img_avatar2.png" alt="Avatar" class="avatar" />
     </div>
@@ -50,8 +51,7 @@
 
       <button type="submit">Login</button>
       <label>
-        <input type="checkbox" checked="checked" name="remember" /> Remember
-        me
+        <input type="checkbox" checked="checked" name="remember" /> Remember me
       </label>
     </div>
 
@@ -61,40 +61,24 @@
     </div>
   </form>
 
-  <div>
-    <footer class="bg-dark text-light text-center p-4 mt-5">
-      <div class="container">
-        <!-- Logo -->
-        <img src="../img/icon/iconlogo.ico" alt="Logo" style="width: 50px" class="mb-3" />
-
-        <!-- Texto -->
-        <p>© 2025 Level Up Gamer. Todos los derechos reservados.</p>
-
-        <!-- Links -->
-        <div class="mb-3">
-          <a href="../html/politica-y-privacidad.html" class="text-light me-3">Política de Privacidad</a>
-          <a href="../html/terminos-y-condiciones.html" class="text-light me-3">Términos y Condiciones</a>
-          <a href="../html/formularioSoporte.html" class="text-light">Contacto</a>
-        </div>
-
-        <!-- Redes Sociales -->
-        <div>
-          <a href="https://facebook.com" target="_blank" class="text-light me-3">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank" class="text-light me-3">
-            <i class="bi bi-twitter"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" class="text-light me-3">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="https://youtube.com" target="_blank" class="text-light">
-            <i class="bi bi-youtube"></i>
-          </a>
-        </div>
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center p-4 mt-5">
+    <div class="container">
+      <img src="../img/icon/iconlogo.ico" alt="Logo" style="width: 50px" class="mb-3" />
+      <p>© 2025 Level Up Gamer. Todos los derechos reservados.</p>
+      <div class="mb-3">
+        <a href="../html/politica-y-privacidad.html" class="text-light me-3">Política de Privacidad</a>
+        <a href="../html/terminos-y-condiciones.html" class="text-light me-3">Términos y Condiciones</a>
+        <a href="../html/formularioSoporte.html" class="text-light">Contacto</a>
       </div>
-    </footer>
-  </div>
+      <div>
+        <a href="https://facebook.com" target="_blank" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" class="text-light"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

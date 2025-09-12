@@ -1,28 +1,47 @@
-document.querySelector("form").addEventListener("submit", function(event) {
-    const email = document.querySelector("input[name='email']").value.trim();
-    const password = document.querySelector("input[name='psw']").value.trim();
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
 
-    // Validar campos vacíos
-    if (!email || !password) {
-        alert("Por favor completa todos los campos.");
-        event.preventDefault();
-        return;
+  // Usuario simulado para pruebas
+  const mockUser = {
+    username: "usuario1",
+    password: "123456",
+    nombre: "Rodrigo Aedo",
+    email: "usuario@correo.com"
+  };
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // evitar envío real
+
+    const username = form.uname.value.trim();
+    const password = form.psw.value.trim();
+
+    // ======== VALIDACIÓN DE NEGOCIO =========
+    if (!username || !password) {
+      alert("Por favor completa todos los campos.");
+      return;
     }
 
-    // Validar formato del email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert("Por favor ingresa un correo válido.");
-        event.preventDefault();
-        return;
-    }
-
-    // Ejemplo: restricción simple de contraseña mínima
     if (password.length < 6) {
-        alert("La contraseña debe tener al menos 6 caracteres.");
-        event.preventDefault();
-        return;
+      alert("La contraseña debe tener al menos 6 caracteres.");
+      return;
     }
 
-    // Aquí podría ir la lógica para enviar datos al backend (PHP)
+    // Aquí podrías agregar más reglas de negocio según necesites
+
+    // ======== LOGIN SIMULADO =========
+    if (username === mockUser.username && password === mockUser.password) {
+      // Guardar usuario en sessionStorage
+      sessionStorage.setItem("user", JSON.stringify(mockUser));
+      // Redirigir a perfil
+      window.location.href = "perfil.html";
+    } else {
+      alert("Usuario o contraseña incorrectos");
+    }
+  });
+
+  // Cancel button opcional
+  const cancelBtn = document.querySelector(".cancelbtn");
+  if (cancelBtn) {
+    cancelBtn.addEventListener("click", () => form.reset());
+  }
 });

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil Usuario - Level Up Gamer</title>
+
+    <!-- Bootstrap y estilos propios -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css" />
+    <link rel="stylesheet" href="../css/stylesheet-html-body.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <img src="../img/icon/iconlogo.ico" alt="Avatar Logo" style="width: 40px" class="rounded-pill" />
+            <a class="navbar-brand" style="padding-left: 1%" href="#">Level up Gamer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../html/perfil-editar.html">Editar perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/mis-pedidos.html">Mis pedidos</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido del perfil -->
+    <main class="container my-5">
+        <h1>Bienvenido, <span id="username">Usuario</span></h1>
+        <p>Correo: <span id="useremail">usuario@correo.com</span></p>
+
+        <div class="mt-4">
+            <button id="logoutBtn" class="btn btn-danger">Cerrar sesión</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center p-4 mt-auto">
+        <div class="container">
+            <img src="../img/icon/iconlogo.ico" alt="Logo" style="width: 50px" class="mb-3" />
+            <p>© 2025 Level Up Gamer. Todos los derechos reservados.</p>
+            <div class="mb-3">
+                <a href="../html/politica-y-privacidad.html" class="text-light me-3">Política de Privacidad</a>
+                <a href="../html/terminos-y-condiciones.html" class="text-light me-3">Términos y Condiciones</a>
+                <a href="../html/formularioSoporte.html" class="text-light">Contacto</a>
+            </div>
+            <div>
+                <a href="https://facebook.com" target="_blank" class="text-light me-3"><i
+                        class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-light me-3"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" class="text-light"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Cargar usuario desde sessionStorage
+        const user = JSON.parse(sessionStorage.getItem("user"));
+
+        if (user) {
+            document.getElementById("username").textContent = user.nombre;
+            document.getElementById("useremail").textContent = user.email;
+        } else {
+            // Si no hay usuario, redirigir al login
+            window.location.href = "inicio_sesion.html";
+        }
+
+        // Cerrar sesión
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+            sessionStorage.removeItem("user");
+            window.location.href = "inicio_sesion.html";
+        });
+    </script>
+</body>
+
+</html>
