@@ -1,338 +1,330 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameStore - Productos Gamer</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="css/stylesheet-productos.css" />
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameStore - Productos Gamer</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/stylesheet-productos.css" />
+
 </head>
-<style> 
+<style>
   body {
     background-color: #0f0f1a;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+  }
 
-.navbar {
+  .navbar {
     background-color: #1a1a2e !important;
-}
+  }
 
-.card {
+  .card {
     background-color: #1a1a2e;
     border: 1px solid #2d2d4d;
     transition: transform 0.3s, box-shadow 0.3s;
     height: 100%;
-}
+  }
 
-.card:hover {
+  .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
+  }
 
-.card-title {
+  .card-title {
     color: #4cc9f0;
     font-weight: bold;
-}
+  }
 
-.price {
+  .price {
     color: #f72585;
     font-weight: bold;
     font-size: 1.2rem;
-}
+  }
 
-.btn-primary {
+  .btn-primary {
     background-color: #4361ee;
     border: none;
-}
+  }
 
-.btn-primary:hover {
+  .btn-primary:hover {
     background-color: #3a56d4;
-}
+  }
 
-.product-header {
+  .product-header {
     background: linear-gradient(90deg, #4361ee, #f72585);
     color: white;
     padding: 3rem 0;
     margin-bottom: 2rem;
     text-align: center;
-}
+  }
 
-.footer {
+  .footer {
     background-color: #1a1a2e;
     padding: 2rem 0;
     margin-top: 3rem;
-}
+  }
 
-.rating {
+  .rating {
     color: #ffc107;
     margin-bottom: 10px;
-}
+  }
 </style>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
-      <div class="container-fluid">
-        <img
-          src="../img/icon/iconlogo.ico"
-          alt="Avatar Logo"
-          style="width: 40px"
-          class="rounded-pill"
-        />
-        <a class="navbar-brand" style="padding-left: 1%" href="#"
-          >Level up Gamer</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="productos.html">Productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-          </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <div class="container-fluid">
+      <img src="../img/icon/iconlogo.ico" alt="Avatar Logo" style="width: 40px" class="rounded-pill" />
+      <a class="navbar-brand" style="padding-left: 1%" href="#">Level up Gamer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header de productos -->
+  <div class="product-header">
+    <div class="container">
+      <h1 class="display-4">Productos Gamer</h1>
+      <p class="lead">Encuentra los mejores productos para gamers al mejor precio</p>
+    </div>
+  </div>
+
+  <!-- Sección de productos -->
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Producto 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/productos/catan.webp" class="card-img-top" alt="Catan">
+          <div class="card-body">
+            <h5 class="card-title">Catan</h5>
+            <p class="card-text">Un clásico juego de estrategia donde los jugadores compiten por colonizar y
+              expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en
+              familia o con amigos.</p>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Juegos de Mesa</span>
+            </div>
+            <p class="price">$29.990 CLP</p>
+            <button class="btn btn-primary w-100">Añadir al carrito</button>
+          </div>
         </div>
       </div>
-    </nav>
 
-    <!-- Header de productos -->
-    <div class="product-header">
-        <div class="container">
-            <h1 class="display-4">Productos Gamer</h1>
-            <p class="lead">Encuentra los mejores productos para gamers al mejor precio</p>
+      <!-- Producto 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/productos/carcassonne.jpg" class="card-img-top" alt="Carcassonne">
+          <div class="card-body">
+            <h5 class="card-title">Carcassonne </h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Juegos de Mesa</span>
+            </div>
+            <p class="card-text"> Un juego de colocación de fichas donde los jugadores construyen el paisaje
+              alrededor de la fortaleza medieval de Carcassonne. Ideal para 2-5 jugadores y fácil de
+              aprender.</p>
+            <p class="price">$24.990 CLP</p>
+            <button class="btn btn-primary w-100">Añadir al carrito</button>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Sección de productos -->
+      <!-- Producto 3 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/productos/xboxcontrol.jpg" class="card-img-top" alt="Control Xbox">
+          <div class="card-body">
+            <h5 class="card-title">Controlador Inalámbrico Xbox Series X</h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Accesorios</span>
+            </div>
+            <p class="card-text">Ofrece una experiencia de juego cómoda con
+              botones mapeables y una respuesta táctil mejorada. Compatible con consolas Xbox y PC.</p>
+            <p class="price">$59.990 CLP</p>
+            <button class="btn btn-primary w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/300x200/1a1a2e/4361ee?text=Monitor+Curvo" class="card-img-top"
+            alt="Auriculares HyperX ">
+          <div class="card-body">
+            <h5 class="card-title">Auriculares Gamer HyperX Cloud II </h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Accesorios</span>
+            </div>
+            <p class="card-text">Proporcionan un sonido envolvente de calidad con un
+              micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad
+              durante largas sesiones de juego.</p>
+            <p class="price">$79.990 CLP</p>
+            <button class="btn btn-primary w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/productos/play5.webp" class="card-img-top" alt="Play5">
+          <div class="card-body">
+            <h5 class="card-title">PlayStation 5</h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Consolas</span>
+            </div>
+            <p class="card-text">La consola de última generación de Sony, que ofrece gráficos
+              impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva.</p>
+            <p class="price">$549.990 CLP</p>
+            <button class="btn btn-primary w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/productos/pcgamer.webp" class="card-img-top" alt="Pc Gamer">
+          <div class="card-body">
+            <h5 class="card-title">PC Gamer ASUS ROG Strix </h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Computadores Gamers</span>
+            </div>
+            <p class="card-text">Un potente equipo diseñado para los gamers más exigentes,
+              equipado con los últimos componentes para ofrecer un rendimiento excepcional en
+              cualquier juego.</p>
+            <p class="price">$1.299.990 CLP</p>
+            <button class="btn btn-primary w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/productos/sillagamer.jpg" class="card-img-top" alt="Silla Gamer">
+          <div class="card-body">
+            <h5 class="card-title">Silla Gamer Secretlab Titan </h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Sillas Gamers</span>
+            </div>
+            <p class="card-text">Diseñada para el máximo confort, esta silla ofrece un soporte
+              ergonómico y personalización ajustable para sesiones de juego prolongadas.</p>
+            <p class="price">$349.990 CLP</p>
+            <button class="btn btn-primary w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/productos/mouse.webp" class="card-img-top" alt="Mouse">
+          <div class="card-body">
+            <h5 class="card-title">Mouse Gamer Logitech G502 HERO </h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Mouse</span>
+            </div>
+            <p class="card-text">Con sensor de alta precisión y botones
+              personalizables, este mouse es ideal para gamers que buscan un control preciso y
+              personalización</p>
+            <p class="price">$49.990 CLP</p>
+            <button class="btn btn-primary w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 9 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/productos/mousepad.webp" class="card-img-top" alt="Mousepad">
+          <div class="card-body">
+            <h5 class="card-title">Mousepad Razer Goliathus Extended Chroma</h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Mousepad</span>
+            </div>
+            <p class="card-text">Ofrece un área de juego amplia con
+              iluminación RGB personalizable, asegurando una superficie suave y uniforme para el
+              movimiento del mouse.</p>
+            <p class="price">$29.990 CLP</p>
+            <button class="btn btn-primary w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 10 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/300x200/1a1a2e/4361ee?text=Kit+RAM+RGB" class="card-img-top"
+            alt="Polera">
+          <div class="card-body">
+            <h5 class="card-title">Polera Gamer Personalizada 'Level-Up'</h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Poleras Personalizadas</span>
+            </div>
+            <p class="card-text">Una camiseta cómoda y estilizada, con la
+              posibilidad de personalizarla con tu gamer tag o diseño favorito</p>
+            <p class="price">$14.990 CLP</p>
+            <button class="btn btn-primary w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
     <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <!-- Producto 1 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="img/productos/catan.webp" class="card-img-top" alt="Catan">
-                    <div class="card-body">
-                        <h5 class="card-title">Catan</h5>
-                        <p class="card-text">Un clásico juego de estrategia donde los jugadores compiten por colonizar y
-expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en
-familia o con amigos.</p>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success">Juegos de Mesa</span>
-                        </div>
-                        <p class="price">$29.990 CLP</p>
-                        <button class="btn btn-primary w-100">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Producto 2 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="img/productos/carcassonne.jpg" class="card-img-top" alt="Carcassonne">
-                    <div class="card-body">
-                        <h5 class="card-title">Carcassonne </h5>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success">Juegos de Mesa</span>
-                        </div>
-                        <p class="card-text"> Un juego de colocación de fichas donde los jugadores construyen el paisaje
-alrededor de la fortaleza medieval de Carcassonne. Ideal para 2-5 jugadores y fácil de
-aprender.</p>
-                        <p class="price">$24.990 CLP</p>
-                        <button class="btn btn-primary w-100">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Producto 3 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="img/productos/xboxcontrol.jpg" class="card-img-top" alt="Control Xbox">
-                    <div class="card-body">
-                        <h5 class="card-title">Controlador Inalámbrico Xbox Series X</h5>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success">Accesorios</span>
-                        </div>
-                        <p class="card-text">Ofrece una experiencia de juego cómoda con
-botones mapeables y una respuesta táctil mejorada. Compatible con consolas Xbox y PC.</p>
-                        <p class="price">$59.990 CLP</p>
-                        <button class="btn btn-primary w-100">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Producto 4 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://via.placeholder.com/300x200/1a1a2e/4361ee?text=Monitor+Curvo" class="card-img-top" alt="Auriculares HyperX ">
-                    <div class="card-body">
-                        <h5 class="card-title">Auriculares Gamer HyperX Cloud II </h5>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success">Accesorios</span>
-                        </div>
-                        <p class="card-text">Proporcionan un sonido envolvente de calidad con un
-micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad
-durante largas sesiones de juego.</p>
-                        <p class="price">$79.990 CLP</p>
-                        <button class="btn btn-primary w-100">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Producto 5 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="img/productos/play5.webp" class="card-img-top" alt="Play5">
-                    <div class="card-body">
-                        <h5 class="card-title">PlayStation 5</h5>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success">Consolas</span>
-                        </div>
-                        <p class="card-text">La consola de última generación de Sony, que ofrece gráficos
-impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva.</p>
-                        <p class="price">$549.990 CLP</p>
-                        <button class="btn btn-primary w-100">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Producto 6 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="img/productos/pcgamer.webp" class="card-img-top" alt="Pc Gamer">
-                    <div class="card-body">
-                        <h5 class="card-title">PC Gamer ASUS ROG Strix </h5>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success">Computadores Gamers</span>
-                        </div>
-                        <p class="card-text">Un potente equipo diseñado para los gamers más exigentes,
-equipado con los últimos componentes para ofrecer un rendimiento excepcional en
-cualquier juego.</p>
-                        <p class="price">$1.299.990 CLP</p>
-                        <button class="btn btn-primary w-100">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Producto 7 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="img/productos/sillagamer.jpg" class="card-img-top" alt="Silla Gamer">
-                    <div class="card-body">
-                        <h5 class="card-title">Silla Gamer Secretlab Titan </h5>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success">Sillas Gamers</span>
-                        </div>
-                        <p class="card-text">Diseñada para el máximo confort, esta silla ofrece un soporte
-ergonómico y personalización ajustable para sesiones de juego prolongadas.</p>
-                        <p class="price">$349.990 CLP</p>
-                        <button class="btn btn-primary w-100">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Producto 8 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="img/productos/mouse.webp" class="card-img-top" alt="Mouse">
-                    <div class="card-body">
-                        <h5 class="card-title">Mouse Gamer Logitech G502 HERO </h5>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success">Mouse</span>
-                        </div>
-                        <p class="card-text">Con sensor de alta precisión y botones
-personalizables, este mouse es ideal para gamers que buscan un control preciso y
-personalización</p>
-                        <p class="price">$49.990 CLP</p>
-                        <button class="btn btn-primary w-100">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Producto 9 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="img/productos/mousepad.webp" class="card-img-top" alt="Mousepad">
-                    <div class="card-body">
-                        <h5 class="card-title">Mousepad Razer Goliathus Extended Chroma</h5>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success">Mousepad</span>
-                        </div>
-                        <p class="card-text">Ofrece un área de juego amplia con
-iluminación RGB personalizable, asegurando una superficie suave y uniforme para el
-movimiento del mouse.</p>
-                        <p class="price">$29.990 CLP</p>
-                        <button class="btn btn-primary w-100">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Producto 10 -->
-            <div class="col">
-                <div class="card h-100">
-                    <img src="https://via.placeholder.com/300x200/1a1a2e/4361ee?text=Kit+RAM+RGB" class="card-img-top" alt="Polera">
-                    <div class="card-body">
-                        <h5 class="card-title">Polera Gamer Personalizada 'Level-Up'</h5>
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success">Poleras Personalizadas</span>
-                        </div>
-                        <p class="card-text">Una camiseta cómoda y estilizada, con la
-posibilidad de personalizarla con tu gamer tag o diseño favorito</p>
-                        <p class="price">$14.990 CLP</p>
-                        <button class="btn btn-primary w-100">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Level-Up</h5>
+          <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
         </div>
+        <div class="col-md-4">
+          <h5>Enlaces rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="html/index.html" class="text-white">Inicio</a></li>
+            <li><a href="html/productos.html" class="text-white">Productos</a></li>
+            <li><a href="html/sobre-nosotros.html" class="text-white">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p><i class="fas fa-map-marker-alt me-2"></i> Paicaví 3280, Concepción, Bío Bío</p>
+          <p><i class="fas fa-phone me-2"></i> +1 234 567 890</p>
+          <p><i class="fas fa-envelope me-2"></i> info@gamestore.com</p>
+        </div>
+      </div>
+      <hr class="mt-4">
+      <div class="text-center">
+        <p>&copy; 2023 GameStore - Todos los derechos reservados</p>
+      </div>
     </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="footer mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Level-Up</h5>
-                    <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Enlaces rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="html/index.html" class="text-white">Inicio</a></li>
-                        <li><a href="html/productos.html" class="text-white">Productos</a></li>
-                        <li><a href="html/sobre-nosotros.html" class="text-white">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contacto</h5>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> Paicaví 3280, Concepción, Bío Bío</p>
-                    <p><i class="fas fa-phone me-2"></i> +1 234 567 890</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@gamestore.com</p>
-                </div>
-            </div>
-            <hr class="mt-4">
-            <div class="text-center">
-                <p>&copy; 2023 GameStore - Todos los derechos reservados</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
