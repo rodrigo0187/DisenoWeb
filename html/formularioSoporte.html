@@ -5,127 +5,138 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formulario Soporte</title>
-  <!-- hoja de estilo stylesheet-formulario-contacto.css -->
-  <link rel="stylesheet" href="../css/stylesheet-formulario-soporte.css" />
 
-  <!-- Latest compiled JavaScript -->
+  <!-- Bootstrap -->
   <script src="../js/bootstrap.bundle.min.js"></script>
-
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- consumiendo los iconos de las redes sociales -->
+  <!-- Iconos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-  <!-- controlador de html y body junto con el footer -->
+
+  <!-- Hojas de estilo -->
   <link rel="stylesheet" href="../css/stylesheet-html-body.css">
-  <!-- style navbar -->
   <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css">
-  <!-- controlador de html y body junto con el footer -->
-  <link rel="stylesheet" href="../css/stylesheet-html-body.css">
+  <link rel="stylesheet" href="../css/stylesheet-general.css">
+  <link rel="stylesheet" href="../css/stylesheet-formulario-soporte.css" />
+
+  <style>
+    /* Personalización del formulario */
+    .formulario label {
+      color: white;
+      /* labels en blanco */
+    }
+
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid #ccc;
+    }
+
+    .formulario input::placeholder,
+    .formulario textarea::placeholder {
+      color: #eee;
+    }
+
+    .contenedor-form-mapa {
+      display: flex;
+      gap: 20px;
+      align-items: stretch;
+      /* alinea el bottom del mapa y formulario */
+      margin-top: 20px;
+    }
+
+    .contenedor-form-mapa .formulario,
+    .contenedor-form-mapa .mapa {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contenedor-form-mapa .mapa iframe {
+      flex: 1;
+      width: 100%;
+      border: 0;
+    }
+  </style>
 </head>
 
 <body>
   <div class="page-container">
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark navbar-custom">
       <div class="container-fluid">
-        <img src="../img/icon/iconlogo.ico" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+        <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
         <a class="navbar-brand" style="padding-left: 1%;" href="../html/index.html">Level up Gamer</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <!-- declaracion enlace productos -->
           <ul class="navbar-nav ms-auto">
-            <li class="navbar-item mx-1">
-              <a class="nav-link" href="../html/productos.html">Tienda</a>
-            </li>
-            <!-- ?<img src="img/icon/acceso.png" alt="Avatar acceso" style="width:40px;"> -->
-            <!-- <img src="img/icon/iniciar-sesion.png" alt="Avatar inisesion" style="width:30px;"> -->
-            <!-- declaracion enlace formulario contacto -->
-            <li class="nav-item mx-1">
-              <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
-            </li>
-            <!-- <img src="img/icon/datos-de-contacto.png" alt="Avatar Contacto" style="width:40px;"> -->
-            <!-- declaracion de Productos -->
-
-
-            <!-- declaracion del blog -->
-            <li class="nav-item mx-1">
-              <a class="nav-link" href="../html/blog.html">Blog</a>
-            </li>
-
-            <!-- declaracion sobre nosotros -->
-            <li class="nav-item mx-1">
-              <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
-            </li>
-            <!-- declaracion enlace iniciar sesión -->
-            <li class="nav-item mx-1">
-              <a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a>
-            </li>
-            <!-- declaracion enlace iniciar registro -->
-            <li class="nav-item mx-1">
-              <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
-            </li>
+            <li class="navbar-item mx-1"><a class="nav-link" href="../html/productos.html">Tienda</a></li>
+            <li class="nav-item mx-1"><a class="nav-link" href="../html/formularioSoporte.html">Soporte</a></li>
+            <li class="nav-item mx-1"><a class="nav-link" href="../html/blog.html">Blog</a></li>
+            <li class="nav-item mx-1"><a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li class="nav-item mx-1"><a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a></li>
+            <li class="nav-item mx-1"><a class="nav-link" href="../html/inicio-registro.html">Registro</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- declaracion de formulario -->
-    <div class="container">
-      <form action="action_page.php">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." />
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+    <!-- Contenedor Formulario + Mapa -->
+    <div class="container mt-4 contenedor-form-mapa">
+      <!-- Formulario a la izquierda -->
+      <div class="formulario">
+        <form action="action_page.php" class="d-flex flex-column h-100">
+          <label for="fname">Nombres</label>
+          <input type="text" id="fname" name="firstname" placeholder="Tus Nombres.." class="mb-3" />
 
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="chile">Chile</option>
-          <option value="argentina">Argentina</option>
-          <option value="peru">Peru</option>
-        </select>
+          <label for="lname">Apellidos</label>
+          <input type="text" id="lname" name="lastname" placeholder="Tus apellidos.." class="mb-3" />
 
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px"></textarea>
+          <label for="country">Pais</label>
+          <select id="country" name="country" class="mb-3">
+            <option value="chile">Chile</option>
+            <option value="argentina">Argentina</option>
+            <option value="peru">Peru</option>
+          </select>
 
-        <input type="submit" value="Submit" />
-      </form>
+          <label for="subject">Asunto</label>
+          <textarea id="subject" name="subject" placeholder="Escribe algo.." class="mb-3"
+            style="height: 100%;"></textarea>
+
+          <input type="submit" value="Enviar" class="btn btn-primary mt-auto" />
+        </form>
+      </div>
+
+      <!-- Mapa a la derecha -->
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9036.840546535235!2d-73.06175933793867!3d-36.7944157561956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669b4503c9a1735%3A0x3fc32996839e6986!2sDuoc%20UC%3A%20Sede%20San%20Andr%C3%A9s%20De%20Concepci%C3%B3n!5e0!3m2!1ses!2scl!4v1757751331192!5m2!1ses!2scl"
+          allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </div>
-    <!-- div contenedor footer -->
-    <div>
-      <footer class="bg-dark text-light text-center p-4 mt-5">
-        <div class="container">
-          <!-- Logo -->
-          <img src="../img/icon/iconlogo.ico" alt="Logo" style="width: 50px" class="mb-3" />
 
-          <!-- Texto -->
-          <p>© 2025 Level Up Gamer. Todos los derechos reservados.</p>
-
-          <!-- Links -->
-          <div class="mb-3">
-            <a href="../html/politica-y-privacidad.html" class="text-light me-3">Política de Privacidad</a>
-            <a href="../html/terminos-y-condiciones.html" class="text-light me-3">Términos y Condiciones</a>
-            <a href="../html/formularioSoporte.html" class="text-light">Contacto</a>
-          </div>
-
-          <!-- Redes Sociales -->
-          <div>
-            <a href="https://facebook.com" target="_blank" class="text-light me-3">
-              <i class="bi bi-facebook"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" class="text-light me-3">
-              <i class="bi bi-twitter"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" class="text-light me-3">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://youtube.com" target="_blank" class="text-light">
-              <i class="bi bi-youtube"></i>
-            </a>
-          </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center p-4 mt-5">
+      <div class="container">
+        <img src="../img/icon/iconlogo.ico" alt="Logo" style="width: 50px" class="mb-3" />
+        <p>© 2025 Level Up Gamer. Todos los derechos reservados.</p>
+        <div class="mb-3">
+          <a href="../html/politica-y-privacidad.html" class="text-light me-3">Política de Privacidad</a>
+          <a href="../html/terminos-y-condiciones.html" class="text-light me-3">Términos y Condiciones</a>
+          <a href="../html/formularioSoporte.html" class="text-light">Contacto</a>
         </div>
-      </footer>
-    </div>
+        <div>
+          <a href="https://facebook.com" target="_blank" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com" target="_blank" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" class="text-light"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
 

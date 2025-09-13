@@ -12,7 +12,8 @@ input[type=text], select, textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: #04AA6D;
+  /* background-color: #04AA6D; */
+  background-color: #BC13FE;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -22,7 +23,9 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  /* background-color: #45a049; */
+  /* background-color: #BC13FE; */
+  background-color: #7213fe;
 }
 
 /* Add a background color and some padding around the form */
@@ -31,3 +34,75 @@ input[type=submit]:hover {
   background-color: #212529;
   padding: 20px;
 } */
+ /* Centrar y limitar el tamaño del formulario */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* ocupa casi toda la pantalla */
+}
+
+form {
+  margin:30px;
+  background:#343a40;
+  padding: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px; /* el formulario no se pasa de este ancho */
+}
+
+/* Ajustar inputs */
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Botones */
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color:#7213fe;
+}
+label{
+  color: #ffff;
+}
+/* Estilo general del select */
+#country {
+  background-color: #f0f0f0; /* Fondo por defecto */
+  color: #333;              /* Color de texto por defecto */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Estilo cuando se selecciona una opción */
+#country option:checked {
+  background-color: #7213fe; /* Fondo de la opción seleccionada */
+  color: white;              /* Color del texto de la opción seleccionada */
+}
+
+/* Para el select en sí, cuando tiene un valor seleccionado */
+#country:focus {
+  outline: none;
+  border-color:  #7213fe;
+}
+
+

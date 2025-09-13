@@ -1,14 +1,15 @@
-body {
-  font-family: Times, serif,Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
 html {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
+   background-color: #0f0f1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* padding-top: 100px; */
 }
+
 
 .politica{
   text-align: center;
@@ -25,6 +26,12 @@ body {
 h2{
   font-family: 'Orbitron',sans-serif;
 }
-p2{
+p{
   font-family: 'Roboto',sans-serif;
 }
+
+p a {
+text-decoration: none;
+ color:#BC13FE;
+}
+

@@ -1,0 +1,45 @@
+/* Centrar y limitar el tamaño del formulario */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* ocupa casi toda la pantalla */
+}
+
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px; /* el formulario no se pasa de este ancho */
+}
+
+/* Ajustar inputs */
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Botones */
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #495057;
+}
