@@ -12,10 +12,12 @@
 
   <link rel="stylesheet" href="../css/stylesheet-productos.css" />
 
+  <link rel="stylesheet" href="../css/stylesheet-footer.css" />
+  <!--
   <script defer src="../js/products.js"></script>
   <script defer src="../js/validate.js"></script>
   <script defer src="../js/main.js"></script>
- 
+ -->
 </head>
 
 
@@ -46,7 +48,7 @@
           <li class="nav-item">
             <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
           </li>
-          
+
           <li class="nav-item ">
             <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
           </li>
@@ -54,25 +56,25 @@
             <a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a>
           </li>
         </ul>
-        
-        
+
+
       </div>
       <!-- Cart -->
       <a class="cart" href="products.html#carrito" aria-label="Carrito">
-      🛒 <span id="cart-count" aria-live="polite">0</span>
-    </a>
+        🛒 <span id="cart-count" aria-live="polite">0</span>
+      </a>
     </div>
   </nav>
 
 
   <!-- Sección de hero -->
   <section class="hero-section">
-        <div class="container">
-            <h1 class="display-3 fw-bold">Catálogo de Productos</h1>
-            <p class="lead">Encuentra los mejores productos para gamers al mejor precio</p>
-            <!--<button class="btn btn-gamer btn-lg mt-3">Ver Ofertas <i class="fas fa-arrow-right ms-2"></i></button>-->
-        </div>
-    </section>
+    <div class="container">
+      <h1 class="display-3 fw-bold">Catálogo de Productos</h1>
+      <p class="lead">Encuentra los mejores productos para gamers al mejor precio</p>
+      <!--<button class="btn btn-gamer btn-lg mt-3">Ver Ofertas <i class="fas fa-arrow-right ms-2"></i></button>-->
+    </div>
+  </section>
 
 
   </main>
@@ -91,7 +93,7 @@
             <p class="card-text">Un clásico juego de estrategia donde los jugadores compiten por colonizar y
               expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en
               familia o con amigos.</p>
-            
+
             <p class="price">$29.990 CLP</p>
             <button class="btn btn-primary w-100">Añadir al carrito</button>
           </div>
@@ -136,8 +138,7 @@
       <!-- Producto 4 -->
       <div class="col">
         <div class="card h-100">
-          <img src="../img/productos/audifonos.png" class="card-img-top"
-            alt="Auriculares HyperX ">
+          <img src="../img/productos/audifonos.png" class="card-img-top" alt="Auriculares HyperX ">
           <div class="card-body">
             <h5 class="card-title">Auriculares Gamer HyperX Cloud II </h5>
             <div class="d-flex justify-content-between align-items-center mb-2">
@@ -267,27 +268,38 @@
         <div class="col-md-4">
           <h5>Level-Up</h5>
           <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
+          
         </div>
+
         <div class="col-md-4">
           <h5>Enlaces rápidos</h5>
-          <ul class="list-unstyled">
-            <li><a href="html/index.html" class="text-white">Inicio</a></li>
-            <li><a href="html/productos.html" class="text-white">Productos</a></li>
-            <li><a href="html/sobre-nosotros.html" class="text-white">Contacto</a></li>
+          <ul class="footer-links">
+            <li><a href="../html/index.html" class="text-white">Home</a></li>
+            <li><a href="../html/productos.html" class="text-white">Productos</a></li>
+            <li><a href="../" class="text-white">Sobre Nosotros</a></li>
+            <li><a href="../html/blogs.html" class="text-white">Contacto</a></li>
           </ul>
         </div>
+
         <div class="col-md-4">
           <h5>Contacto</h5>
-          <p><i class="fas fa-map-marker-alt me-2"></i> Paicaví 3280, Concepción, Bío Bío</p>
-          <p><i class="fas fa-phone me-2"></i> +1 234 567 890</p>
-          <p><i class="fas fa-envelope me-2"></i> info@gamestore.com</p>
+          <ul class="footer-links">
+            <li><a href="https://maps.app.goo.gl/LA3bMz4KLmiopUho9" class="text-white">📍 Av. Paicaví 3280, Concepción, Chile</a></li>
+            <li><a href="mailto:999leveluptienda@gmail.com" class="text-white">✉️ pasteleria.1000sabores@gmail.com</a></li>
+            <li><a href="tel:+56912345678" class="text-white">📞+56 9 1234 5678</a></li>
+          </ul>
+        </div>
+
+        <hr class="mt-4">
+        <div class="text-center">
+          <small>&copy; 2025 Level-Up. Todos los derechos reservados</small>
+          <ul class="list-inline mt-2">
+            <li class="list-inline-item"><a href="../html/politica-y-privacidad.html"
+                class="text-white me-3">Privacidad</i></a></li>
+            <li class="list-inline-item"><a href="../html/terminos-y-condiciones.html"
+                class="text-white me-3">Terminos</i></a></li>
         </div>
       </div>
-      <hr class="mt-4">
-      <div class="text-center">
-        <p>&copy; 2023 GameStore - Todos los derechos reservados</p>
-      </div>
-    </div>
   </footer>
 
   <!-- Bootstrap JS -->

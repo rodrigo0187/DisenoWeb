@@ -49,11 +49,7 @@ body {
     text-align: center;
 }
 
-.footer {
-    background-color: #1a1a2e;
-    padding: 2rem 0;
-    margin-top: 3rem;
-}
+
 
 .rating {
     color: #ffc107;
@@ -74,7 +70,7 @@ body {
 
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3') no-repeat center center;
+        url('../img/imgHero.webp') no-repeat center center;
     background-size: cover;
     padding: 7rem 0;
     margin-bottom: 3rem;
@@ -106,7 +102,7 @@ body {
     font-weight: 700;
     color: #ffffff !important;
     font-size: 1.5rem;
-    
+
 }
 
 .nav-link {
@@ -123,4 +119,6 @@ body {
     background-color: #391984;
     color: white !important;
 }
+
+
 
