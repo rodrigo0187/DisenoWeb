@@ -2,6 +2,7 @@ body {
     background-color: #0f0f1a;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 100px;
 }
 
 .navbar {
@@ -16,7 +17,7 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -37,7 +38,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #3a56d4;
+    background-color: #293c94;
 }
 
 .product-header {
@@ -58,3 +59,68 @@ body {
     color: #ffc107;
     margin-bottom: 10px;
 }
+
+.btn-gamer {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-gamer:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3') no-repeat center center;
+    background-size: cover;
+    padding: 7rem 0;
+    margin-bottom: 3rem;
+    text-align: center;
+
+}
+
+.cart {
+    font-weight: 7000;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    border-radius: 999px
+}
+
+.cart:hover,
+.cart.active {
+    background-color: #391984;
+    color: white !important;
+}
+
+.navbar-nav {
+    margin: 0 .5rem;
+    text-decoration: none;
+    padding: .4rem .6rem;
+    border-radius: 10px
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #ffffff !important;
+    font-size: 1.5rem;
+    
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #391984;
+    color: white !important;
+}
+
