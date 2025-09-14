@@ -1,0 +1,133 @@
+body {
+    background-color: #0f0f1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+}
+
+/* Variables de color */
+:root {
+    --electric-blue: #1E90FF;
+    --neon-green: #39FF14;
+}
+
+
+/* Estilos para el carrusel */
+.carousel-caption {
+    background-color: rgba(75, 15, 92, 0.404);
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translate(20%, -10%);
+    width: 50%;
+}
+
+.carousel-item img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+
+/* Estilos para los botones del carrusel */
+.btn-gamer {
+    background-color: #500570;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+.btn-gamer:hover {
+    background-color: #6f079c;
+    transform: scale(1.05);
+}
+
+/* Estilos para los controles del carrusel */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.11);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/* Estilos para la sección de beneficios*/
+.register-benefit {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: rgba(30, 144, 255, 0.1);
+    margin: 10px;
+    border: 1px solid var(--neon-green);
+}
+
+.register-benefit i {
+    font-size: 2.5rem;
+    color: var(--neon-green);
+    margin-bottom: 1rem;
+}
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+}
+
+/* Estilos para las cartas de categorías */
+.category-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #2d2d4d;
+    height: 100%;
+    position: relative;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(57, 255, 20, 0.3);
+}
+
+.category-image {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover,
+.category-image {
+    transform: scale(1.05);
+}
+
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 20px;
+    color: white;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+/*Estilo para botones de categorias*/
+.view-all-btn {
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--neon-green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: rgba(255, 255, 255, 0.288);
+    
+}

@@ -1,0 +1,32 @@
+.navbar {
+    background-color: #1a1a2e !important;
+}
+
+.navbar-nav {
+    margin: 0 .5rem;
+    text-decoration: none;
+    padding: .4rem .6rem;
+    border-radius: 10px
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #ffffff !important;
+    font-size: 1.5rem;
+
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #391984;
+    color: white !important;
+}
