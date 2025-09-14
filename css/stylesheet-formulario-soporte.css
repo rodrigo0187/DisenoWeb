@@ -11,9 +11,9 @@ input[type=text], select, textarea {
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+input[type=submit].btn {
   /* background-color: #04AA6D; */
-  background-color: #BC13FE;
+  background-color: #7213fe;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -21,19 +21,19 @@ input[type=submit] {
   cursor: pointer;
 }
 
+/* Add a background color and some padding around the form */
+/* .container {
+  border-radius: 5px;
+  background-color: #7213fe;
+  padding: 20px;
+} */
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   /* background-color: #45a049; */
   /* background-color: #BC13FE; */
-  background-color: #7213fe;
+  background-color: #b989ff;
 }
 
-/* Add a background color and some padding around the form */
-/* .container {
-  border-radius: 5px;
-  background-color: #212529;
-  padding: 20px;
-} */
  /* Centrar y limitar el tamaño del formulario */
 .login-container {
   display: flex;
@@ -70,7 +70,7 @@ form button {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #343a40;
+  background-color: #7213fe;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -79,7 +79,7 @@ form button {
 }
 
 form button:hover {
-  background-color:#7213fe;
+  background-color:#b989ff;
 }
 label{
   color: #ffff;
@@ -104,5 +104,3 @@ label{
   outline: none;
   border-color:  #7213fe;
 }
-
-
