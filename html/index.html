@@ -11,105 +11,341 @@
   <script src="../js/bootstrap.bundle.min.js"></script>
   <!-- consumiendo los iconos de las redes sociales -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <!-- style navbar -->
-  <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css">
-  <!-- controlador de html y body junto con el footer -->
-  <link rel="stylesheet" href="../css/stylesheet-html-body.css">
+
+  <!-- CSS personalizado de footer -->
+  <link rel="stylesheet" href="../css/stylesheet-footer.css" />
+
+  <!-- CSS personalizado de navbar -->
+  <link rel="stylesheet" href="../css/stylesheet-navbar.css" />
+
+  <!-- CSS personalizado de index -->
+  <link rel="stylesheet" href="../css/stylesheet-index.css" />
+
+
+
 
 </head>
 
 <body>
-  <div class="page-container">
-    <nav class="navbar navbar-expand-sm navbar-dark navbar-custom">
-      <div class="container-fluid">
-        <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
-        <a class="navbar-brand" style="padding-left: 1%;" href="#">Level up Gamer</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <!-- declaracion enlace productos -->
-          <ul class="navbar-nav ms-auto">
-            <li class="navbar-item mx-1">
-              <a class="nav-link" href="../html/productos.html">Tienda</a>
-            </li>
-            <!-- ?<img src="img/icon/acceso.png" alt="Avatar acceso" style="width:40px;"> -->
-            <!-- <img src="img/icon/iniciar-sesion.png" alt="Avatar inisesion" style="width:30px;"> -->
-            <!-- declaracion enlace formulario contacto -->
-            <li class="nav-item mx-1">
-              <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
-            </li>
-            <!-- <img src="img/icon/datos-de-contacto.png" alt="Avatar Contacto" style="width:40px;"> -->
-            <!-- declaracion de Productos -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top ">
+    <div class="container-fluid">
+      <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width: 100px" class="rounded-pill" />
+      <a class="navbar-brand" style="padding-left: 1%" href="#">Level-up Gamer |</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <!-- Links de Navbar -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../html/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/blogs.html">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
+          </li>
 
-            <!-- declaracion del blog -->
-            <li class="nav-item mx-1">
-              <a class="nav-link" href="../html/blog.html">Blog</a>
-            </li>
-
-            <!-- declaracion sobre nosotros -->
-            <li class="nav-item mx-1">
-              <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
-            </li>
-            <!-- declaracion enlace iniciar sesión -->
-            <li class="nav-item mx-1">
-              <a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a>
-            </li>
-            <!-- declaracion enlace iniciar registro -->
-            <li class="nav-item mx-1">
-              <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
-            </li>
-          </ul>
-        </div>
+          <li class="nav-item ">
+            <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a>
+          </li>
+        </ul>
       </div>
-  </div>
+      <!-- Cart -->
+      <a class="cart" href="products.html#carrito" aria-label="Carrito">
+        🛒 <span id="cart-count" aria-live="polite">0</span>
+      </a>
+    </div>
   </nav>
-  <!-- main contenido principal de la pagina -->
-  <div class="container">
-    <main>
-      <h1>Contenido principal</h1>
-      <p>llenar con info?</p>
-    </main>
-  </div>
 
-  <!-- inicio div contenedor footer -->
-  <div>
-    <footer class="bg-dark text-light text-center p-4 mt-5">
-      <div class="container">
-        <!-- Logo -->
-        <img src="../img/icon/iconlogo.ico" alt="Logo" style="width:50px;" class="mb-3">
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-        <!-- Texto -->
-        <p>© 2025 Level Up Gamer. Todos los derechos reservados.</p>
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+    </div>
 
-        <!-- Links -->
-        <div class="mb-3">
-          <a href="../html/politica-y-privacidad.html" class="text-light me-3">Política de Privacidad</a>
-          <a href="../html/terminos-y-condiciones.html" class="text-light me-3">Términos y Condiciones</a>
-          <a href="../html/formularioSoporte.html" class="text-light">Contacto</a>
-        </div>
-
-        <!-- Redes Sociales -->
-        <div>
-          <a href="https://facebook.com" target="_blank" class="text-light me-3">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank" class="text-light me-3">
-            <i class="bi bi-twitter"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" class="text-light me-3">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="https://youtube.com" target="_blank" class="text-light">
-            <i class="bi bi-youtube"></i>
-          </a>
+    <!-- The slideshow/carousel -->
+    <!--Carousel item 1-->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../img/CarouselSlide9.jpg" alt="Inicio" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h1>Level-Up|Tienda Gamer</h1>
         </div>
       </div>
+
+      <!--Carousel item 2-->
+      <div class="carousel-item">
+        <img src="../img/CarouselSlide1.jpg" alt="Productos" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Conoce mas acerca de nuestra gran variedad de productos.</h3>
+          <a href="../html/productos.html" class="btn btn-gamer btn-lg mt-3">Ver Productos<i
+              class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+
+      <!--Carousel item 3-->
+      <div class="carousel-item">
+        <img src="../img/CarouselSlide10.jpg" alt="Conocenos" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Conoce mas sobre nosotros y nuestra vision.</h3>
+          <a href="../html/sobre-nosotros.html" class="btn btn-gamer btn-lg mt-3">Conocenos<i
+              class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+
+      <!--Carousel item 4-->
+      <div class="carousel-item">
+        <img src="../img/CarouselSlide7.jpg" alt="Blog" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Visita nustros blogs para no perderte ninguna noticia del mundo gamer.</h3>
+          <a href="../html/blogs.html" class="btn btn-gamer btn-lg mt-3">Blogs<i
+              class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+
+      <!--Carousel item 5-->
+      <div class="carousel-item">
+        <img src="../img/CarouselSlide8.jpg" alt="Redes" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Visita nuestras redes sociales y siguenos en Instagram.</h3>
+          <a href="https://www.instagram.com/999leveluptienda" class="btn btn-gamer btn-lg mt-3">Redes<i
+              class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+
+      <!--Carousel item 6-->
+      <div class="carousel-item">
+        <img src="../img/CarouselSlide5.jpg" alt="Registrate" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+          <h3>Unete a nuestra comunidad y obten grandes beneficios.</h3>
+          <a href="../html/inicio-registro.html" class="btn btn-gamer btn-lg mt-3">Registrate<i
+              class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- Benefits Section -->
+  <!-- Beneficio 1-->
+  <section class="row mb-5" id="benefits">
+    <div class="col-md-4 mb-4">
+      <div class="register-benefit">
+        <i class="bi bi-mortarboard-fill"></i>
+        <h4>Descuento Duoc</h4>
+        <p>20% de descuento para estudiantes Duoc UC</p>
+      </div>
+    </div>
+
+    <!-- Beneficio 2-->
+    <div class="col-md-4 mb-4">
+      <div class="register-benefit">
+        <i class="bi bi-box-seam-fill"></i>
+        <h4>Envíos a todo Chile</h4>
+        <p>Despachamos a todo el país sin costo adicional</p>
+      </div>
+    </div>
+
+    <!-- Beneficio 3-->
+    <div class="col-md-4 mb-4">
+      <div class="register-benefit">
+        <i class="bi bi-award-fill"></i>
+        <h4>Programa Level-Up</h4>
+        <p>Gana puntos y canjealos por productos y descuentos</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="categorias-productos" class="mb-5">
+    <h1 class="section-title text-center mb-4">Categorías de Productos</h1>
+    <!-- Categorias de productos -->
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <!-- Juegos de Mesa -->
+        <div class="col-md-6 col-lg-4">
+          <div class="category-card">
+            <img src="../img/categorias-productos/JuegosDeMesa.webp" class="category-image" alt="Juegos de Mesa">
+            <div class="category-overlay">
+              <h3 class="category-title">Juegos de Mesa</h3>
+              <p>Descubre la diversión sin pantallas con nuestra colección de juegos de mesa.</p>
+              <a href="../html/productos.html" class="view-all-btn">Ver todos <i
+                  class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accesorios -->
+        <div class="col-md-6 col-lg-4">
+          <div class="category-card">
+            <img src="../img/categorias-productos/Accesorios.jpg" class="category-image" alt="Accesorios">
+            <div class="category-overlay">
+              <h3 class="category-title">Accesorios</h3>
+              <p>Potencia tu experiencia de juego con nuestros accesorios gamer.</p>
+              <a href="../html/productos.html" class="view-all-btn">Ver todos <i
+                  class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consolas -->
+        <div class="col-md-6 col-lg-4">
+          <div class="category-card">
+            <img src="../img/categorias-productos/Consolas.jpeg" class="category-image" alt="Consolas">
+            <div class="category-overlay">
+              <h3 class="category-title">Consolas</h3>
+              <p>Vive la mejor experiencia gamer con nuestras consolas de última generación.</p>
+              <a href="../html/productos.html" class="view-all-btn">Ver todos <i
+                  class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Computadores Gamers -->
+        <div class="col-md-6 col-lg-4">
+          <div class="category-card">
+            <img src="../img/categorias-productos/ComputadoresGamer.jpg" class="category-image"
+              alt="Computadores Gamers">
+            <div class="category-overlay">
+              <h3 class="category-title">Computadores Gamers</h3>
+              <p>Desata todo tu poder gamer con nuestros computadores diseñados para el máximo rendimiento.</p>
+              <a href="../html/productos.html" class="view-all-btn">Ver todos <i
+                  class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sillas Gamers -->
+        <div class="col-md-6 col-lg-4">
+          <div class="category-card">
+            <img src="../img/categorias-productos/SillasGamer.jpg" class="category-image" alt="Sillas Gamers">
+            <div class="category-overlay">
+              <h3 class="category-title">Sillas Gamers</h3>
+              <p>Juega con estilo y comodidad total. Con nuestras sillas gamer diseñadas para brindarte un soporte
+                ergonómico.</p>
+              <a href="../html/productos.html" class="view-all-btn">Ver todos <i
+                  class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mouse -->
+        <div class="col-md-6 col-lg-4">
+          <div class="category-card">
+            <img src="../img/categorias-productos/MouseGamer.webp" class="category-image" alt="Mouse">
+            <div class="category-overlay">
+              <h3 class="category-title">Mouse</h3>
+              <p>Precisión, velocidad y control absoluto. Nuestros Mouse Gamer están diseñados para responder a cada
+                movimiento con máxima exactitud.</p>
+              <a href="../html/productos.html" class="view-all-btn">Ver todos <i
+                  class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mousepad -->
+        <div class="col-md-6 col-lg-4">
+          <div class="category-card">
+            <img src="../img/categorias-productos/MousePadGamer.jpg" class="category-image" alt="Mousepad">
+            <div class="category-overlay">
+              <h3 class="category-title">Mousepad</h3>
+              <p>Mouse Pads óptimos que combinan estabilidad, durabilidad y estilo.</p>
+              <a href="../html/productos.html" class="view-all-btn">Ver todos <i
+                  class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poleras Personalizadas -->
+        <div class="col-md-6 col-lg-4">
+          <div class="category-card">
+            <img src="../img/categorias-productos/PoleronesGamer.jpg" class="category-image" alt="Ropa Personalizada">
+            <div class="category-overlay">
+              <h3 class="category-title">Ropa Personalizada</h3>
+              <p>Expresa tu estilo único con nuestra ropa personalizada. Diseños exclusivos y calidad premium.</p>
+              <a href="../html/productos.html" class="view-all-btn">Ver todos <i
+                  class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5><i class="bi bi-controller"></i>Level-Up</h5>
+            <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
+          </div>
+
+          <!-- Enlaces rapidos -->
+          <div class="col-md-4">
+            <h5>Enlaces rápidos</h5>
+            <ul class="footer-links">
+              <li><a href="../html/index.html" class="none">Home</a></li>
+              <li><a href="../html/productos.html" class="none">Productos</a></li>
+              <li><a href="../html/sobre-nosotros.html" class="none">Sobre Nosotros</a></li>
+              <li><a href="../html/blogs.html" class="none">Contacto</a></li>
+            </ul>
+          </div>
+
+          <!-- Contacto -->
+          <div class="col-md-4">
+            <h5>Contacto</h5>
+            <ul class="footer-links">
+              <li><a href="https://maps.app.goo.gl/LA3bMz4KLmiopUho9" class="bi bi-geo-alt-fill"> Av. Paicaví 3280,
+                  Concepción,Chile</a></li>
+              <li><a href="mailto:999leveluptienda@gmail.com" class="bi bi-envelope-at-fill"> 999leveluptienda@gmail.com</a>
+              </li>
+              <li><a href="tel:+56912345678" class="bi bi-telephone-fill"> +56 9 1234 5678</a></li>
+              <li><a href="https://www.instagram.com/999leveluptienda" class="bi bi-instagram"> Instagram</a>
+              </li>
+            </ul>
+          </div>
+
+          <hr class="mt-4">
+          <div class="text-center">
+            <small>&copy; 2025 Level-Up. Todos los derechos reservados</small>
+            <ul class="list-inline mt-2">
+              <li class="list-inline-item"><a href="../html/politica-y-privacidad.html"
+                  class="text-white me-3">Privacidad</i></a></li>
+              <li class="list-inline-item"><a href="../html/terminos-y-condiciones.html"
+                  class="text-white me-3">Terminos</i></a></li>
+          </div>
+        </div>
     </footer>
-  </div>
-  </div>
+
 </body>
 
 </html>

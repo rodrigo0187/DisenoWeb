@@ -1,0 +1,44 @@
+.footer {
+    background-color: #1a1a2e;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--neon-green);
+    padding-left: 5px;
+}
+
+body {
+    background-color: #0f0f1a;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 100px;
+}
+
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron-VariableFont_wght.ttf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+h5 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    color: var(--neon-green);
+}
+
+:root {
+    --electric-blue: #1E90FF;
+    --neon-green: #39FF14;
+}
+
