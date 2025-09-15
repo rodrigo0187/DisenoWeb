@@ -1,69 +1,66 @@
 body {
-  font-family: Times, serif,Arial, Helvetica, sans-serif;
-  margin: 0;
+    background-color: #0f0f1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../img/imgHero2.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 7rem 0;
+    margin-bottom: 3rem;
+    text-align: center;
+
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    color: var(--neon-green);
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 html {
   box-sizing: border-box;
 }
 
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 .column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
+  float: bottom ;
+  width: 30%;
+  margin-left: 40px;
+  padding: 0px 8px;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
+    background-color: #1a1a2e;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    border:2px solid #500570;
 }
 
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(255, 0, 234, 0.493);
 }
 
-.container {
-  padding: 0 16px;
+.card img {
+    border: 30px solid #1a1a2e;
 }
 
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
-.title {
-  color: grey;
-}
 
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
 
-.button:hover {
-  background-color: #555;
-}
 
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
+
+
+
+
+

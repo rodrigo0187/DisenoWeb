@@ -7,14 +7,19 @@
   margin-top: 60px;
 }
 
+
+
 /* Caja del formulario */
 .register-container form {
-  background:#343a40;
+  background-color: #292949;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  width:100%;
-  max-width: 320px; /* tamaño máximo */
+  box-shadow: 15px 15px 15px rgba(255, 0, 234, 0.493);
+  width: 100%;
+  max-width: 320px;
+  
+  
+  /* tamaño máximo */
 }
 
 /* Inputs */
@@ -41,21 +46,25 @@
 
 /* Cancelar */
 .cancelbtn {
-   background-color: #7213fe;
+  background-color: #500570;
   color: #fff;
+  transition: all 0.3s ease;
 }
 
 /* Sign up */
 .signupbtn {
-   background-color: #7213fe;
+  background-color: #500570;
   color: #fff;
   float: right;
+  transition: all 0.3s ease;
 }
 
 .cancelbtn:hover {
-  background-color: #b989ff;;
+  background-color: #6f079c;
+  transform: scale(1.05);
 }
 
 .signupbtn:hover {
-  background-color: #b989ff;;
+  background-color: #6f079c;
+  transform: scale(1.05);
 }

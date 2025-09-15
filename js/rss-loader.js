@@ -41,7 +41,7 @@ async function loadRSS() {
 
       // Crear artículo
       const article = document.createElement("article");
-      article.classList.add("news-item", "mb-4", "p-3", "border", "rounded");
+      article.classList.add("news-item", "mb-1", "p-3", "border", "rounded");
 
       article.innerHTML = `
         <h2 class="h5">

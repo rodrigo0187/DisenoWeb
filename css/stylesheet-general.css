@@ -5,20 +5,28 @@ body {
   margin: 0;
   background-color: #0f0f1a;
     color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto',  sans-serif;
 }
 
 .termino{
 text-align: center;
 }
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-VariableFont_wdth_wght.ttf') format('woff2');
+    font-weight: 400;
+    font-weight: 500;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
 @font-face {
     font-family: 'Orbitron';
     src: url('../fonts/Orbitron-VariableFont_wght.ttf')format('truetype');
 }
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Italic-VariableFont_wdth_wght.ttf')format('truetype');
-}
+
 
 h2{
     font-family: 'Orbitron',sans-serif;

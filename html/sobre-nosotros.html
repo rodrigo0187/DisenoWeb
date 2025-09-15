@@ -1,127 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre Nosotros</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Latest compiled JavaScript -->
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <!-- consumiendo los iconos de las redes sociales -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="../css/stylesheet-sobre-nosotros.css" />
-  </head>
-  <body>
-    <!-- sobre nosotros -->
-    <div class="about-section">
-      <h1>About Us Page</h1>
-      <p>Some text about who we are and what we do.</p>
-      <p>
-        Resize the browser window to see that this page is responsive by the
-        way.
-      </p>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nosotros</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
-    <h2 style="text-align: center">Our Team</h2>
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <img src="/w3images/team1.jpg" alt="Jane" style="width: 100%" />
-          <div class="container">
-            <h2>Jane Doe</h2>
-            <p class="title">CEO & Founder</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <p>jane@example.com</p>
-            <p><button class="button">Contact</button></p>
-          </div>
-        </div>
-      </div>
+  <!-- Latest compiled JavaScript -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <!-- consumiendo los iconos de las redes sociales -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../css/stylesheet-sobre-nosotros.css" />
+  <!-- CSS personalizado de footer -->
+  <link rel="stylesheet" href="../css/stylesheet-footer.css" />
 
-      <div class="column">
-        <div class="card">
-          <img src="/w3images/team2.jpg" alt="Mike" style="width: 100%" />
-          <div class="container">
-            <h2>Mike Ross</h2>
-            <p class="title">Art Director</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <p>mike@example.com</p>
-            <p><button class="button">Contact</button></p>
-          </div>
-        </div>
-      </div>
+  <!-- CSS personalizado de navbar -->
+  <link rel="stylesheet" href="../css/stylesheet-navbar.css" />
+</head>
 
-      <div class="column">
-        <div class="card">
-          <img src="/w3images/team3.jpg" alt="John" style="width: 100%" />
-          <div class="container">
-            <h2>John Doe</h2>
-            <p class="title">Designer</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <p>john@example.com</p>
-            <p><button class="button">Contact</button></p>
-          </div>
-        </div>
-      </div>
-    </div>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top ">
+    <div class="container-fluid">
+      <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width: 100px" class="rounded-pill" />
+      <a class="navbar-brand" style="padding-left: 1%" href="../html/index.html">Level-up Gamer | Sobre Nosotros</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div>
-      <footer class="bg-dark text-light text-center p-4 mt-5">
+      <!-- Links de Navbar -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/index.html">Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/productos.html">Productos</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/blog.html">Blogs</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
+          </li>
+
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/inicio_sesion.html">🛒 </a>
+          </li>
+        </ul>
+  </nav>
+  <!-- Sección de hero -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="display-3 fw-bold">Sobre Nosotros</h1>
+
+                <p class="display-6">Aprende mas sobre nuestros objetivos y quienes somos.</p>
+                <!--<button class="btn btn-gamer btn-lg mt-3">Ver Ofertas <i class="fas fa-arrow-right ms-2"></i></button>-->
+            </div>
+        </section>
+
+  
+  <div class="row">
+    <div class="column">
+      <div class="card h-100">
+        <img src="../img/imgHero1.jpg" alt="Jane" style="width: 100%" />
         <div class="container">
-          <!-- Logo -->
-          <img
-            src="../img/icon/iconlogo.ico"
-            alt="Logo"
-            style="width: 50px"
-            class="mb-3"
-          />
+          <h2>Quienes Somos?</h2>
+          <p>Level-Up Gamer es una tienda online dedicada a satisfacer las necesidades de los entusiastas de los
+            videojuegos en Chile. Lanzada hace dos años como respuesta a la creciente demanda durante la
+            pandemia, Leves-Up Gamer ofrece una amplia gama de productos para gamers, desde consolas y
+            accesorios hasta computadores y sillas especializadas. Aunque no cuenta con una ubicación física,
+            realiza despachos a todo el país.</p>
+          
+        </div>
+      </div>
+    </div>
 
-          <!-- Texto -->
-          <p>© 2025 Level Up Gamer. Todos los derechos reservados.</p>
+    <div class="column">
+      <div class="card">
+        <img src="../img/imgHero2.jpg" alt="Mike" style="width: 100%" />
+        <div class="container">
+          <h2>Mision</h2>
+          <p>Proporcionar productos de alta calidad para gamers en todo Chile, ofreciendo una experiencia de
+            compra única y personalizada, con un enfoque en la satisfacción del cliente y el crecimiento de la
+            comunidad gamer.</p>
+          
+        </div>
+      </div>
+    </div>
 
-          <!-- Links -->
-          <div class="mb-3">
-            <a href="politica.html" class="text-light me-3"
-              >Política de Privacidad</a
-            >
-            <a href="terminos.html" class="text-light me-3"
-              >Términos y Condiciones</a
-            >
-            <a href="contacto.html" class="text-light">Contacto</a>
+    <div class="column">
+      <div class="card">
+        <img src="../img/imgHero3.jpg" alt="John" style="width: 100%" />
+        <div class="container">
+          <h2>Vision</h2>
+          
+          <p>Ser la tienda online líder en productos para gamers en Chile, reconocida por su innovación, servicio
+            al cliente excepcional, y un programa de fidelización basado en gamificación que recompense a
+            nuestros clientes más fieles.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <!-- Footer -->
+    <footer class="footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5><i class="bi bi-controller"></i>Level-Up</h5>
+            <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
           </div>
 
-          <!-- Redes Sociales -->
-          <div>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              class="text-light me-3"
-            >
-              <i class="bi bi-facebook"></i>
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              class="text-light me-3"
-            >
-              <i class="bi bi-twitter"></i>
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              class="text-light me-3"
-            >
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://youtube.com" target="_blank" class="text-light">
-              <i class="bi bi-youtube"></i>
-            </a>
+          <!-- Enlaces rapidos -->
+          <div class="col-md-4">
+            <h5>Enlaces rápidos</h5>
+            <ul class="footer-links">
+              <li><a href="../html/index.html" class="none">Home</a></li>
+              <li><a href="../html/productos.html" class="none">Productos</a></li>
+              <li><a href="../html/sobre-nosotros.html" class="none">Sobre Nosotros</a></li>
+              <li><a href="../html/blogs.html" class="none">Contacto</a></li>
+            </ul>
+          </div>
+
+          <!-- Contacto -->
+          <div class="col-md-4">
+            <h5>Contacto</h5>
+            <ul class="footer-links">
+              <li><a href="https://maps.app.goo.gl/LA3bMz4KLmiopUho9" class="bi bi-geo-alt-fill"> Av. Paicaví 3280,
+                  Concepción,Chile</a></li>
+              <li><a href="mailto:999leveluptienda@gmail.com" class="bi bi-envelope-at-fill">
+                  999leveluptienda@gmail.com</a>
+              </li>
+              <li><a href="tel:+56912345678" class="bi bi-telephone-fill"> +56 9 1234 5678</a></li>
+              <li><a href="https://www.instagram.com/999leveluptienda" class="bi bi-instagram"> Instagram</a>
+              </li>
+            </ul>
+          </div>
+
+          <hr class="mt-4">
+          <div class="text-center">
+            <small>&copy; 2025 Level-Up. Todos los derechos reservados</small>
+            <ul class="list-inline mt-2">
+              <li class="list-inline-item"><a href="../html/terminos-y-privacidad.html"
+                  class="text-white me-3">Privacidad</i></a></li>
+              <li class="list-inline-item"><a href="../html/terminos-y-condiciones.html"
+                  class="text-white me-3">Terminos</i></a></li>
           </div>
         </div>
-      </footer>
-    </div>
-  </body>
+    </footer>
+  </div>
+</body>
+
 </html>

@@ -1,25 +1,35 @@
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical
+    /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
 input[type=submit].btn {
   /* background-color: #04AA6D; */
-  background-color: #7213fe;
-  color: white;
-  padding: 12px 20px;
+  background-color: #500570;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  font-weight: 700;
 }
+
 
 /* Add a background color and some padding around the form */
 /* .container {
@@ -31,26 +41,33 @@ input[type=submit].btn {
 input[type=submit]:hover {
   /* background-color: #45a049; */
   /* background-color: #BC13FE; */
-  background-color: #b989ff;
+  background-color: #6f079c;
+  transform: scale(1.05);
 }
 
- /* Centrar y limitar el tamaño del formulario */
+/* Centrar y limitar el tamaño del formulario */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* ocupa casi toda la pantalla */
+  min-height: 80vh;
+  /* ocupa casi toda la pantalla */
 }
 
 form {
-  margin:30px;
-  background:#343a40;
+  margin: 30px;
+  background-color: #1a1a2e;
+
   padding: 30px;
   padding-bottom: 30px;
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+ background-color: #292949;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 15px 15px 15px rgba(255, 0, 234, 0.493);
   width: 100%;
-  max-width: 400px; /* el formulario no se pasa de este ancho */
+  max-width: 320px;
+  /* el formulario no se pasa de este ancho */
 }
 
 /* Ajustar inputs */
@@ -63,6 +80,20 @@ form input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
+}
+
+.mapa{
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255, 0, 234, 0.493);
+    height: 100%;
+    position: relative;
+}
+
+.mapa:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 0, 234, 0.493);
 }
 
 /* Botones */
@@ -79,15 +110,19 @@ form button {
 }
 
 form button:hover {
-  background-color:#b989ff;
+  background-color: #b989ff;
 }
-label{
+
+label {
   color: #ffff;
 }
+
 /* Estilo general del select */
 #country {
-  background-color: #f0f0f0; /* Fondo por defecto */
-  color: #333;              /* Color de texto por defecto */
+  background-color: #f0f0f0;
+  /* Fondo por defecto */
+  color: #333;
+  /* Color de texto por defecto */
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -95,12 +130,14 @@ label{
 
 /* Estilo cuando se selecciona una opción */
 #country option:checked {
-  background-color: #7213fe; /* Fondo de la opción seleccionada */
-  color: white;              /* Color del texto de la opción seleccionada */
+  background-color: #7213fe;
+  /* Fondo de la opción seleccionada */
+  color: white;
+  /* Color del texto de la opción seleccionada */
 }
 
 /* Para el select en sí, cuando tiene un valor seleccionado */
 #country:focus {
   outline: none;
-  border-color:  #7213fe;
+  border-color: #7213fe;
 }

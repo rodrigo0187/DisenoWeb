@@ -1,21 +1,25 @@
-.navbar-custom{
-      /* background-color: #6a0dad;
+.navbar-custom {
+    /* background-color: #6a0dad;
       background-image: linear-gradient(45deg, #6a0dad, #1e90ff); */
-   background: #BF00FF;
-background: radial-gradient(circle,rgba(191, 0, 255, 1) 11%, rgba(191, 0, 255, 1) 0%, rgba(107, 0, 255, 1) 72%, rgba(0, 0, 0, 1) 100%);
+    background: #BF00FF;
+    background: radial-gradient(circle, rgba(191, 0, 255, 1) 11%, rgba(191, 0, 255, 1) 0%, rgba(107, 0, 255, 1) 72%, rgba(0, 0, 0, 1) 100%);
 }
-.navbar-custom .nav-link{
+
+.navbar-custom .nav-link {
     color: #ffffff;
-    
+
 }
-.navbar-custom .nav-link:hover{
+
+.navbar-custom .nav-link:hover {
     color: #b580ff;
     transition: color 0.3s ease;
 }
-.navbar-custom .navbar-brand{
+
+.navbar-custom .navbar-brand {
     /* color: #1e90ff; */
     transition: color 0.3s ease;
-}      
-.navbar-custom .navbar-brand:hover{
-    color:#b580ff;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #b580ff;
 }
