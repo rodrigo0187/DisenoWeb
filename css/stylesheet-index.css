@@ -1,8 +1,33 @@
 body {
     background-color: #0f0f1a;
     color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding-top: 100px;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-VariableFont_wdth_wght.ttf') format('woff2');
+    font-weight: 400;
+    font-weight: 500;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron-VariableFont_wght.ttf') format('woff2');
+    font-weight: 400;
+    font-weight: 500;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
 }
 
 /* Variables de color */
@@ -15,6 +40,8 @@ body {
 /* Estilos para el carrusel */
 .carousel-caption {
     background-color: rgba(75, 15, 92, 0.404);
+    border: 1px solid var(--neon-green);
+    box-shadow: 0 10px 20px rgba(57, 255, 20, 0.3);
     border-radius: 10px;
     overflow: hidden;
     transform: translate(20%, -10%);
@@ -69,10 +96,7 @@ body {
 }
 
 
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 1000;
-}
+
 
 /* Estilos para las cartas de categorías */
 .category-card {
@@ -116,6 +140,7 @@ h1 {
     font-weight: 700;
     margin-bottom: 10px;
 }
+
 /*Estilo para botones de categorias*/
 .view-all-btn {
     border-radius: 10px;
@@ -129,5 +154,22 @@ h1 {
 
 .view-all-btn:hover {
     background-color: rgba(255, 255, 255, 0.288);
-    
+
+}
+
+
+.section-title {
+    position: relative;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 700px;
+    height: 5px;
+    background: linear-gradient(to right, var(--electric-blue), var(--neon-green));
+    margin: 10px auto;
+    border-radius: 2px;
 }

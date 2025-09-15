@@ -5,27 +5,50 @@ body {
     padding-top: 100px;
 }
 
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron-VariableFont_wght.ttf') format('woff2');
+    font-weight: 400;
+    font-weight: 500;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
 
+h1, h5 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    color: var(--neon-green);
+}
+
+:root {
+    --electric-blue: #1E90FF;
+    --neon-green: #39FF14;
+}
 
 .card {
     background-color: #1a1a2e;
-    border: 1px solid #2d2d4d;
     transition: transform 0.3s, box-shadow 0.3s;
     height: 100%;
+    border:2px solid #500570;
+}
+
+.card img {
+    border: 30px solid #1a1a2e;
 }
 
 .card:hover {
     transform: translateY(-15px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(55, 255, 20, 0.562);
 }
 
 .card-title {
-    color: #4cc9f0;
     font-weight: bold;
 }
 
 .price {
-    color: #f72585;
+    color: var(--neon-green);
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -48,18 +71,16 @@ body {
 }
 
 
-
-
-
 .btn-gamer {
-    background-color: var(--primary-color);
+    background-color: #500570;
     border: none;
-    color: white;
+    color: rgb(255, 255, 255);
     transition: all 0.3s ease;
+    font-weight: 700;
 }
 
 .btn-gamer:hover {
-    background-color: var(--secondary-color);
+    background-color: #6f079c;
     transform: scale(1.05);
 }
 
@@ -85,8 +106,3 @@ body {
     background-color: #391984;
     color: white !important;
 }
-
-
-
-
-
