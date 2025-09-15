@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Redirigir a perfil
       window.location.href = "perfil.html";
     } else {
-      alert("Usuario o contraseña incorrectos");
+      // alert("Usuario o contraseña incorrectos");
+      console.log(`Intento fallido: ${username} / ${password}`);
     }
   });
 
