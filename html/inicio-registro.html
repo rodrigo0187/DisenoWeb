@@ -8,12 +8,11 @@
   <!-- hoja de estilo boostrap y js -->
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <!-- Latest compiled JavaScript -->
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
   <!-- style navbar -->
   <link rel="stylesheet" href="../css/stylesheet-inicio-registro.css" />
   <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css">
-  <!-- validacion registro -->
-  <script src="js/validacion-registro.js"></script>
+
   <!-- controlador de html y body junto con el footer -->
   <link rel="stylesheet" href="../css/stylesheet-html-body.css">
   <!-- estilo original -->
@@ -43,34 +42,42 @@
       </div>
     </nav>
     <div class="register-container">
-      <form action="action_page.php" style="border: 1px solid #ccc">
+      <form id="registerForm" style="border: 1px solid #ccc">
         <div class="container">
-          <h1>Registrate</h1>
+          <h1>Regístrate</h1>
           <p>Complete este formulario para crear una cuenta.</p>
-          <hr />
+          <p id="asterisco">Los campos con asterisco(*) son obligatorios.</p>
 
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required />
+          <label for="nombre"><b>Nombre Completo (*)</b></label>
+          <input type="text" id="nombre" name="nombre" class="form-control" required>
+          <small id="error-nombre" class="text-danger"></small>
 
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required />
+          <label for="email"><b>Email (*)</b></label>
+          <input type="email" id="email" name="email" class="form-control" required>
+          <small id="error-email" class="text-danger"></small>
 
-          <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" required />
+          <label for="repeat-email"><b>Repite tu email (*)</b></label>
+          <input type="email" id="repeat-email" name="repeat-email" class="form-control" required>
+          <small id="error-repeat-email" class="text-danger"></small>
 
-          <label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px" />
-            Recuérdame
-          </label>
+          <label for="telefono"><b>Teléfono</b></label>
+          <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+569-1234-5678">
+          <small id="error-telefono" class="text-danger"></small>
 
-          <p>
-            Al crear una cuenta, acepta nuestros.
-            <a href="../html/terminos-y-privacidad.html" style="color: dodgerblue">Términos y privacidad.</a>.
-          </p>
+          <label for="psw"><b>Contraseña (*)</b></label>
+          <input type="password" id="psw" name="psw" class="form-control" required>
+          <small id="error-psw" class="text-danger"></small>
 
-          <div class="clearfix">
-            <button type="button" class="cancelbtn">Cancelar</button>
-            <button type="submit" class="signupbtn">Ingresar</button>
+          <label for="psw-repeat"><b>Repite tu contraseña (*)</b></label>
+          <input type="password" id="psw-repeat" name="psw-repeat" class="form-control" required>
+          <small id="error-psw-repeat" class="text-danger"></small>
+
+          <!-- Mensaje de éxito -->
+          <p id="msgExito" class="text-success mt-3"></p>
+
+          <div class="clearfix mt-3">
+            <button type="button" class="cancelbtn btn btn-secondary">Cancelar</button>
+            <button type="submit" class="signupbtn btn btn-primary">Ingresar</button>
           </div>
         </div>
       </form>
@@ -109,7 +116,12 @@
         </div>
       </footer>
     </div>
+    <!-- validacion registro -->
+    <!-- Bootstrap 5.3 desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/validacion-registro.js"></script>
 </body>
-</div>
 
 </html>

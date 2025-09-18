@@ -1,4 +1,4 @@
-/* Centrar formulario */
+/*Centrar formulario*/
 .register-container {
   display: flex;
   justify-content: center;
@@ -14,12 +14,14 @@
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   width:100%;
-  max-width: 320px; /* tamaño máximo */
+  max-width: 350px; /* tamaño máximo */
 }
 
 /* Inputs */
 .register-container input[type="text"],
-.register-container input[type="password"] {
+.register-container input[type="password"],
+.register-container input[type="email"],
+.register-container input[type="tel"]{
   width: 100%;
   padding: 8px;
   margin: 6px 0 15px 0;
@@ -58,4 +60,8 @@
 
 .signupbtn:hover {
   background-color: #b989ff;;
+}
+#asterisco{
+  font-size: 14px;
+  font-style: italic;
 }

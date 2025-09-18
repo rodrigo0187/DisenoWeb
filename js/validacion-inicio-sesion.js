@@ -1,47 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
+  if (!form) return; // seguridad: salir si no hay formulario
 
-  // Usuario simulado para pruebas
-  const mockUser = {
-    username: "usuario1",
-    password: "123456",
-    nombre: "Rodrigo Aedo",
-    email: "usuario@correo.com"
-  };
 
   form.addEventListener("submit", function (event) {
     event.preventDefault(); // evitar envío real
 
-    const username = form.uname.value.trim();
-    const password = form.psw.value.trim();
+    //input desde html
+    const usernameInput = (form.email?.value || "").trim();
+    const passwordInput = (form.psw?.value || "").trim();
 
     // ======== VALIDACIÓN DE NEGOCIO =========
-    if (!username || !password) {
+    if (!usernameInput || !passwordInput) {
       alert("Por favor completa todos los campos.");
       return;
     }
 
-    if (password.length < 6) {
-      alert("La contraseña debe tener al menos 6 caracteres.");
+    // Ejemplo: exigir mínimo 4 y máximo 10 caracteres (ajusta si quieres otra regla)
+    if (passwordInput.length < 4 || passwordInput.length > 10) {
+      alert("La contraseña debe tener entre 6 y 10 caracteres.");
       return;
     }
-
-    // Aquí podrías agregar más reglas de negocio según necesites
-
-    // ======== LOGIN SIMULADO =========
-    if (username === mockUser.username && password === mockUser.password) {
-      // Guardar usuario en sessionStorage
-      sessionStorage.setItem("user", JSON.stringify(mockUser));
-      // Redirigir a perfil
+    // buscar en el localstorage
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    const usuarioValido = usuarios.find(u => u.email === usernameInput && u.psw === passwordInput);
+    if (usuarioValido) {
+      sessionStorage.setItem("user", JSON.stringify(usuarioValido));
+      alert(`Bienvenido ${usuarioValido.nombre}`);
       window.location.href = "perfil.html";
     } else {
-      alert("Usuario o contraseña incorrectos");
+      alert("Usuario o contrasenas incorrectas.");
     }
   });
-
   // Cancel button opcional
   const cancelBtn = document.querySelector(".cancelbtn");
   if (cancelBtn) {
-    cancelBtn.addEventListener("click", () => form.reset());
+    cancelBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      form.reset();
+    });
   }
 });

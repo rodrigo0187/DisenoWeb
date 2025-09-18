@@ -5,25 +5,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio sesión - Level Up Gamer</title>
-
-  <!-- CSS personalizado -->
-  <link rel="stylesheet" href="../css/stylesheet-iniicio-sesion.css" />
-  <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css" />
-  <link rel="stylesheet" href="../css/stylesheet-html-body.css" />
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <!-- theme origin page -->
   <link rel="stylesheet" href="../css/stylesheet-general.css">
-
-  <!-- JS -->
+  <!-- Latest compiled JavaScript -->
   <script src="../js/bootstrap.bundle.min.js"></script>
-  <script src="../js/validacion-inicio-sesion.js"></script>
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="../css/stylesheet-inicio-sesion.css" />
+  <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css" />
+  <link rel="stylesheet" href="../css/stylesheet-html-body.css" />
 </head>
 
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-sm navbar-dark navbar-custom">
     <div class="container-fluid">
-      <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width: 40px" class="rounded-pill" />
+      <img src="../img/icon/LOGO.ico" alt="Avatar" class="avatar" />
       <a class="navbar-brand" style="padding-left: 1%" href="#">Level up Gamer</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -32,6 +29,9 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item mx-1">
             <a class="nav-link" href="../html/index.html">Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/inicio-registro.html">Iniciar Registro</a>
           </li>
         </ul>
       </div>
@@ -42,25 +42,28 @@
   <div class="login-container">
     <form>
       <div class="imgcontainer">
-        <img src="img_avatar2.png" alt="Avatar" class="avatar" />
+        <img src="../img/icon/LOGO.ico" alt="Avatar" class="avatar" />
       </div>
 
       <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required />
+        <label for="email"><b>Nombre de usuario</b></label>
+        <input type="email" id="email" placeholder="Nombre de usuario" name="email" required />
 
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required />
+        <label for="psw"><b>contraseña</b></label>
+        <input type="password" id="psw" placeholder="Ingresa la contraseña" name="psw" required />
+        <!-- error msg -->
+        <!-- <p id="msgerror" class="error-msg"></p> -->
 
-        <button type="submit">Login</button>
+        <button type="submit">Ingresar</button>
+        <!-- <p id="msgerror" class="error-msg">La contraseña debe estar entre 4 y 10 caracteres.</p> -->
         <label>
-          <input type="checkbox" checked="checked" name="remember" /> Remember me
+          <input type="checkbox" checked="checked" name="remember" /> Recuerdame
         </label>
       </div>
 
       <div class="container" style="background-color: #343a40">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">¿Olvidó su contraseña? <a href="#">password?</a></span>
+        <button type="button" class="cancelbtn">Cancelar</button>
+        <span class="psw">¿Olvidó su <a href="#">contraseña?</a></span>
       </div>
     </form>
   </div>
@@ -83,6 +86,9 @@
       </div>
     </div>
   </footer>
+  <!-- JS -->
+  <script src="../js/validacion-inicio-sesion.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
