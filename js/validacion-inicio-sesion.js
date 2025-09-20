@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const passwordInput = (form.psw?.value || "").trim();
 
     // ======== VALIDACIÓN DE NEGOCIO =========
+
     if (!usernameInput || !passwordInput) {
       alert("Por favor completa todos los campos.");
       return;
@@ -24,9 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // buscar en el localstorage
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     const usuarioValido = usuarios.find(u => u.email === usernameInput && u.psw === passwordInput);
+
     if (usuarioValido) {
+      const nombreFormateado = usuarioValido.nombre.charAt(0).toUpperCase() + usuarioValido.nombre.slice(1);
+      usuarioValido.nombre = nombreFormateado; // actualizar objeto
       sessionStorage.setItem("user", JSON.stringify(usuarioValido));
-      alert(`Bienvenido ${usuarioValido.nombre}`);
+
+      alert(`Bienvenido ${nombreFormateado}`);
       window.location.href = "perfil.html";
     } else {
       alert("Usuario o contrasenas incorrectas.");

@@ -1,0 +1,77 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* centra el contenido en toda la pantalla */
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+form {
+  background: rgba(52, 58, 64, 0.9); /* fondo oscuro semitransparente */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+}
+
+body {
+  background: url("../img/teclado2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 13px;
+  background-color: #211f1f;
+  color: #fff;
+}
+
+
+/* form {
+  background: #343a40;  
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  margin-left: 50px;
+} */
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #7213fe;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #b989ff;
+}
+h2{
+  text-align: center;
+}
+
