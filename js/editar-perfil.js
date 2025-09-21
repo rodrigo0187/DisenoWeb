@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     confirmBtn.addEventListener("click", function () {
         const enteredPassword = document.getElementById("verifyPassword").value;
 
-        if (enteredPassword === user.password) {
+        if (enteredPassword === user.psw) {
             user.username = pendingChanges.username;
             user.email = pendingChanges.email;
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Cerrar sesión
-    document.getElementById("logout").addEventListener("click", function () {
+    document.getElementById("logoutBtn").addEventListener("click", function () {
         addActividad("Cierre de sesión");
         sessionStorage.removeItem("user");
         window.location.href = "/html/inicio_sesion.html";

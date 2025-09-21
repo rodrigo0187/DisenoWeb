@@ -88,24 +88,8 @@
 
     <!-- Scripts -->
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Cargar usuario desde sessionStorage
-        const user = JSON.parse(sessionStorage.getItem("user"));
+    <script src="/js/cargar-perfil.js"></script>
 
-        if (user) {
-            document.getElementById("username").textContent = user.nombre;
-            document.getElementById("useremail").textContent = user.email;
-        } else {
-            // Si no hay usuario, redirigir al login
-            window.location.href = "inicio_sesion.html";
-        }
-
-        // Cerrar sesión
-        document.getElementById("logoutBtn").addEventListener("click", function () {
-            sessionStorage.removeItem("user");
-            window.location.href = "inicio_sesion.html";
-        });
-    </script>
 </body>
 
 </html>
