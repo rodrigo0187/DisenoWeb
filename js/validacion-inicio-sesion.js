@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (usuarioValido) {
       const nombreFormateado = usuarioValido.nombre.charAt(0).toUpperCase() + usuarioValido.nombre.slice(1);
       usuarioValido.nombre = nombreFormateado; // actualizar objeto
-      sessionStorage.setItem("user", JSON.stringify(usuarioValido));
+      localStorage.setItem("user", JSON.stringify(usuarioValido));
 
       alert(`Bienvenido ${nombreFormateado}`);
       window.location.href = "perfil.html";

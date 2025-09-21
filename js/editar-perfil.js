@@ -1,20 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let user = JSON.parse(sessionStorage.getItem("user"));
+    let user = JSON.parse(localStorage.getItem("user"));
 
     if (!user) {
-        window.location.href = "inicio-sesion.html";
+        window.location.href = "/html/inicio_sesion.html";
         return;
     }
 
-    // Asegurar que tenga historial
-    if (!user.activity) {
-        user.activity = [];
-    }
+    // Asegurarse de que tenga historial
+    if (!user.activity) user.activity = [];
 
-    // Precargar datos en el formulario
-    document.getElementById("username").value = user.username || "";
-    document.getElementById("email").value = user.email || "";
-
+    // Elementos del DOM
     const form = document.getElementById("perfilForm");
     const modal = document.getElementById("passwordModal");
     const confirmBtn = document.getElementById("confirmBtn");
@@ -23,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let pendingChanges = null;
 
-    // Mostrar historial
+    // -----------------------------
+    // Función para renderizar historial
+    // -----------------------------
     function renderActividad() {
         listaActividad.innerHTML = "";
         user.activity.slice(-5).reverse().forEach(evento => {
@@ -35,15 +32,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     renderActividad();
 
-    // Registrar actividad
+    // -----------------------------
+    // Función para agregar actividad
+    // -----------------------------
     function addActividad(descripcion) {
         const fecha = new Date().toLocaleString();
         user.activity.push({ fecha, descripcion });
-        sessionStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("user", JSON.stringify(user));
         renderActividad();
     }
 
-    // Guardar cambios → abre modal
+    // -----------------------------
+    // Precargar datos en el formulario
+    // -----------------------------
+    document.getElementById("username").value = user.username || "";
+    document.getElementById("email").value = user.email || "";
+
+    // -----------------------------
+    // Guardar cambios → abrir modal
+    // -----------------------------
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -55,19 +62,26 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "flex";
     });
 
+    // -----------------------------
     // Confirmar contraseña
+    // -----------------------------
     confirmBtn.addEventListener("click", function () {
         const enteredPassword = document.getElementById("verifyPassword").value;
 
         if (enteredPassword === user.psw) {
+            const oldUsername = user.username;
+
             user.username = pendingChanges.username;
             user.email = pendingChanges.email;
 
-            sessionStorage.setItem("user", JSON.stringify(user));
+            localStorage.setItem("user", JSON.stringify(user));
 
+            if (oldUsername !== user.username) {
+                addActividad(`Nombre cambiado de ${oldUsername} a ${user.username}`);
+            }
             addActividad("Perfil actualizado");
 
-            alert("Perfil actualizado correctamente ✅");
+            alert("✅ Perfil actualizado correctamente");
             modal.style.display = "none";
             pendingChanges = null;
         } else {
@@ -80,10 +94,12 @@ document.addEventListener("DOMContentLoaded", function () {
         pendingChanges = null;
     });
 
+    // -----------------------------
     // Cerrar sesión
+    // -----------------------------
     document.getElementById("logoutBtn").addEventListener("click", function () {
         addActividad("Cierre de sesión");
-        sessionStorage.removeItem("user");
+        localStorage.removeItem("user");
         window.location.href = "/html/inicio_sesion.html";
     });
 });

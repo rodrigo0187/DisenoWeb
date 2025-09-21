@@ -1,0 +1,100 @@
+body {
+    background-color: #0f0f1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    color: var(--neon-green);
+}
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron-VariableFont_wght.ttf') format('woff2');
+    font-weight: 400;
+    font-weight: 500;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1, h5 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    color: var(--neon-green);
+}
+
+:root {
+    --electric-blue: #1E90FF;
+    --neon-green: #39FF14;
+}
+
+.card {
+    background-color: #1a1a2e;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    border:2px solid #500570;
+}
+
+.card img {
+    border: 30px solid #1a1a2e;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(55, 255, 20, 0.562);
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.price {
+    color: var(--neon-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background-color: #4361ee;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #293c94;
+}
+
+.product-header {
+    background: linear-gradient(90deg, #4361ee, #f72585);
+    color: white;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+.btn-gamer {
+    background-color: #500570;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+.btn-gamer:hover {
+    background-color: #6f079c;
+    transform: scale(1.05);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../img/imgHero.webp') no-repeat center center;
+    background-size: cover;
+    padding: 7rem 0;
+    margin-bottom: 3rem;
+    text-align: center;
+
+}

@@ -1,33 +1,50 @@
-/*Centrar formulario*/
+/* Fondo de la página */
+body {
+  background: url("../img/img-registro-usuario.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* Contenedor centrado solo para el form */
 .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
-  margin-top: 60px;
+  margin: 60px auto; /* margen superior e inferior */
+  width: 100%;
 }
 
-/* Caja del formulario */
+/* Formulario transparente tipo glassmorphism */
 .register-container form {
-  background:#343a40;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  width:100%;
-  max-width: 350px; /* tamaño máximo */
+  background: rgba(52, 58, 64, 0.7); /* semitransparente */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(5px);
 }
 
 /* Inputs */
 .register-container input[type="text"],
 .register-container input[type="password"],
 .register-container input[type="email"],
-.register-container input[type="tel"]{
+.register-container input[type="tel"] {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin: 6px 0 15px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1); /* input ligeramente transparente */
+  color: #fff;
+}
+
+/* Placeholder */
+.register-container input::placeholder {
+  color: #e0e0e0;
 }
 
 /* Botones */
@@ -39,29 +56,30 @@
   border-radius: 5px;
   font-size: 15px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Cancelar */
 .cancelbtn {
-   background-color: #7213fe;
+  background-color: #7213fe;
   color: #fff;
 }
 
-/* Sign up */
+.cancelbtn:hover {
+  background-color: #b989ff;
+}
+
 .signupbtn {
-   background-color: #7213fe;
+  background-color: #7213fe;
   color: #fff;
   float: right;
 }
 
-.cancelbtn:hover {
-  background-color: #b989ff;;
+.signupbtn:hover {
+  background-color: #b989ff;
 }
 
-.signupbtn:hover {
-  background-color: #b989ff;;
-}
-#asterisco{
+/* Asterisco */
+#asterisco {
   font-size: 14px;
   font-style: italic;
 }

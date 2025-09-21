@@ -1,0 +1,85 @@
+/* stylesheet-perfil.css */
+
+/* Fondo del main */
+body{
+    background: url("/img/img-perfil.jpg");
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px); /* altura restante excluyendo navbar y footer */
+    padding: 2rem 0;
+    background: transparent; /* mantiene transparencia */
+}
+
+/* Card transparente tipo formulario */
+.card {
+    background: rgba(0, 0, 0, 0.6); /* negro semitransparente */
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Botones dentro de la card */
+.card .btn {
+    min-width: 120px;
+}
+
+/* Historial de actividad */
+#userPosts {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Scroll personalizado */
+#userPosts::-webkit-scrollbar {
+    width: 6px;
+}
+
+#userPosts::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+}
+
+/* Aplica a todos los botones dentro de la card o container */
+.card .btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #7213fe;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover correcto */
+.card .btn:hover {
+    background-color: #b989ff;
+}
+
+#userPosts {
+    max-height: 200px;         /* Limita altura de la lista */
+    overflow-y: auto;          /* Scroll si hay muchos items */
+    padding-left: 0;           /* Quitar indentación de ul */
+    margin-top: 10px;
+}
+
+#userPosts li {
+    background: rgba(255, 255, 255, 0.1); /* fondo semitransparente */
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #fff;
+    list-style: none;
+    font-size: 14px;
+}
+

@@ -1,63 +1,59 @@
-// Cargar usuario desde sessionStorage
-const user = JSON.parse(sessionStorage.getItem("user"));
+// -----------------------------
+// Cargar usuario y historial
+// -----------------------------
+const user = JSON.parse(localStorage.getItem("user"));
+const userPosts = document.getElementById("userPosts");
 
-if (user) {
-    document.getElementById("username").textContent = user.nombre;
-    document.getElementById("useremail").textContent = user.email;
-} else {
-    // Si no hay usuario, redirigir al login
+if (!user) {
     window.location.href = "inicio_sesion.html";
 }
 
-// Abrir el modal al enviar formulario
-const perfilForm = document.getElementById("perfilForm");
-const modal = document.getElementById("passwordModal");
+// Asegurarse de que exista el historial
+if (!user.activity) user.activity = [];
 
-perfilForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    modal.style.display = "block";
-});
-
-// Cancelar modal
-const cancelBtn = document.getElementById("cancelBtn");
-cancelBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-});
-
-// Cerrar sesión
-document.getElementById("logoutBtn").addEventListener("click", function () {
-    sessionStorage.removeItem("user");
-    window.location.href = "inicio_sesion.html";
-});
-
-// Confirmación de contraseña
-const confirmBtn = document.getElementById("confirmBtn");
-if (confirmBtn) {
-    confirmBtn.addEventListener("click", function () {
-        const inputPass = document.getElementById("verifyPassword").value;
-        if (user && inputPass === user.psw) {
-            // Actualizar los datos del usuario con los inputs del formulario
-            user.nombre = document.getElementById("nombrecompleto").value;
-            user.email = document.getElementById("email").value;
-            user.telefono = document.getElementById("telefono").value;
-            user.psw = document.getElementById("psw").value;
-
-            // guardar en el storage
-            sessionStorage.setItem("user", JSON.stringify(user));
-            //actualizacion en la pagina
-            document.getElementById("username").textContent = user.nombre;
-            document.getElementById("useremail").textContent = user.email;
-
-            alert("✅ Contraseña correcta. Cambios guardados.");
-            modal.style.display = "none";
-            // Aquí puedes agregar la lógica real para guardar los cambios
-        } else {
-            alert("❌ Contraseña incorrecta.");
-        }
+// -----------------------------
+// Función para renderizar historial
+// -----------------------------
+function renderActividad() {
+    userPosts.innerHTML = "";
+    user.activity.slice().reverse().forEach(evento => {
+        const li = document.createElement("li");
+        li.textContent = `${evento.fecha} - ${evento.descripcion}`;
+        userPosts.appendChild(li);
     });
 }
 
-// Cerrar modal al hacer click fuera
-window.addEventListener("click", function (e) {
-    if (e.target === modal) modal.style.display = "none";
+// -----------------------------
+// Función para agregar actividad
+// -----------------------------
+function addActividad(descripcion) {
+    const fecha = new Date().toLocaleString();
+    user.activity.push({ fecha, descripcion });
+    localStorage.setItem("user", JSON.stringify(user));
+    renderActividad();
+}
+
+// -----------------------------
+// Mostrar usuario
+// -----------------------------
+document.getElementById("username").textContent = user.username;
+document.getElementById("useremail").textContent = user.email;
+
+// Renderizar historial inicial
+renderActividad();
+
+// -----------------------------
+// Cerrar sesión
+// -----------------------------
+document.getElementById("logoutBtn").addEventListener("click", function () {
+    addActividad("Cierre de sesión");
+    localStorage.removeItem("user");
+    window.location.href = "/html/inicio_sesion.html";
 });
+
+// -----------------------------
+// Función de ejemplo para compras
+// -----------------------------
+function comprarJuego(nombreJuego) {
+    addActividad(`Compró el juego: ${nombreJuego}`);
+}
