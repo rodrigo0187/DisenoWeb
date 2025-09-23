@@ -15,10 +15,31 @@ body {
     font-display: swap;
 }
 
-h1, h5 {
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-VariableFont_wdth_wght.ttf') format('woff2');
+    font-weight: 400;
+    font-weight: 500;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+h2,h1, h5{
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
     color: var(--neon-green);
+}
+p, h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.card-title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 :root {
@@ -41,10 +62,6 @@ h1, h5 {
     transform: translateY(-15px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     box-shadow: 0 10px 20px rgba(55, 255, 20, 0.562);
-}
-
-.card-title {
-    font-weight: bold;
 }
 
 .price {
@@ -70,6 +87,9 @@ h1, h5 {
     text-align: center;
 }
 
+.fw-bold{
+    color: var(--neon-green);
+}
 
 .btn-gamer {
     background-color: #500570;
@@ -82,6 +102,7 @@ h1, h5 {
 .btn-gamer:hover {
     background-color: #6f079c;
     transform: scale(1.05);
+    color: rgb(255, 255, 255);
 }
 
 .hero-section {
@@ -89,20 +110,26 @@ h1, h5 {
         url('../img/imgHero.webp') no-repeat center center;
     background-size: cover;
     padding: 7rem 0;
-    margin-bottom: 3rem;
     text-align: center;
 
 }
 
-.cart {
-    font-weight: 7000;
-    text-decoration: none;
-    padding: .5rem .75rem;
-    border-radius: 999px
+.bg-gamer{
+    background-color: #1a1a2e;
+    border-radius: 10px;
+    border:2px solid var(--neon-green)
+    
 }
 
-.cart:hover,
-.cart.active {
-    background-color: #391984;
-    color: white !important;
+.border{
+    color: var(--neon-green);
+}
+
+.offcanvas{
+    border: #39FF14;
+    background-color:#24243f ;
+}
+
+.btn-close{
+    background-color: #ffffff;
 }
