@@ -5,11 +5,6 @@ body {
     padding-top: 100px;
 }
 
-h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 600;
-    color: var(--neon-green);
-}
 @font-face {
     font-family: 'Orbitron';
     src: url('../fonts/Orbitron-VariableFont_wght.ttf') format('woff2');
@@ -119,15 +114,22 @@ p, h4{
 
 }
 
-.cart {
-    font-weight: 7000;
-    text-decoration: none;
-    padding: .5rem .75rem;
-    border-radius: 999px
+.bg-gamer{
+    background-color: #1a1a2e;
+    border-radius: 10px;
+    border:2px solid var(--neon-green)
+    
 }
 
-.cart:hover,
-.cart.active {
-    background-color: #391984;
-    color: white !important;
+.border{
+    color: var(--neon-green);
+}
+
+.offcanvas{
+    border: #39FF14;
+    background-color:#24243f ;
+}
+
+.btn-close{
+    background-color: #ffffff;
 }
