@@ -15,7 +15,10 @@
 
   <!-- Hojas de estilo -->
   <link rel="stylesheet" href="../css/stylesheet-html-body.css">
-
+<!-- CSS personalizado de navbar -->
+<link rel="stylesheet" href="/css/stylesheet-nav-bar-custom.css" />
+<!-- CSS personalizado de footer -->
+<link rel="stylesheet" href="../css/stylesheet-footer.css" />
   <link rel="stylesheet" href="../css/stylesheet-general.css">
   <link rel="stylesheet" href="../css/stylesheet-formulario-soporte.css" />
 </head>
@@ -25,30 +28,40 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top ">
       <div class="container-fluid">
-        <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width: 100px" class="rounded-pill" />
-        <a class="navbar-brand" style="padding-left: 1%" href="../html/index.html">Level-up Gamer | Soporte</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width: 100px" class="rounded-pill" />
+          <a class="navbar-brand" style="padding-left: 1%" href="../html/index.html">Level-up Gamer | Soporte</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- Links de Navbar -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav ms-auto">
-            <li class="navbar-item mx-1"><a class="nav-link" href="../html/productos.html">Tienda</a></li>
-            <li class="nav-item mx-1"><a class="nav-link" href="../html/formularioSoporte.html">Soporte</a></li>
-            <li class="nav-item mx-1"><a class="nav-link" href="../html/blog.html">Blog</a></li>
-            <li class="nav-item mx-1"><a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a></li>
-            <li class="nav-item mx-1"><a class="nav-link" href="../html/inicio-registro.html">Registro</a></li>
-            <li class="nav-item mx-1">
-              <a class="nav-link" id="navLoginBtn" href="../html/inicio_sesion.html">Iniciar sesión</a>
-            </li>
-            <li class="nav-item mx-1" id="navUserDisplay" style="display: none;">
-              <a class="nav-link" href="#">Bienvenido, <span id="navUsername"></span></a>
-            </li>
+    <!-- Links de Navbar -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-1">
+          <a class="nav-link" href="../html/index.html">Home</a>
+        </li>
+        <li class="nav-item mx-1">
+          <a class="nav-link" href="../html/productos.html">Productos</a>
+        </li>
+        <li class="nav-item mx-1">
+          <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
+        </li>
+        <li class="nav-item mx-1">
+          <a class="nav-link" href="../html/blog.html">Blogs</a>
+        </li>
+        <li class="nav-item mx-1">
+          <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
+        </li>
 
-
-          </ul>
-    </nav>
+        <li class="nav-item mx-1">
+          <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
+        </li>
+        <li class="nav-item mx-1">
+          <a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a>
+        </li>
+        
+      </ul>
+</nav>
 
     <!-- Contenedor Formulario + Mapa -->
     <div class="container mt-4 contenedor-form-mapa">
@@ -87,49 +100,48 @@
     <!-- Footer -->
     <footer class="footer mt-5">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h5><i class="bi bi-controller"></i>Level-Up</h5>
-            <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
-          </div>
+          <div class="row">
+              <div class="col-md-4">
+                  <h5><i class="bi bi-controller"></i>Level-Up</h5>
+                  <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
+              </div>
 
-          <!-- Enlaces rapidos -->
-          <div class="col-md-4">
-            <h5>Enlaces rápidos</h5>
-            <ul class="footer-links">
-              <li><a href="../html/index.html" class="none">Home</a></li>
-              <li><a href="../html/productos.html" class="none">Productos</a></li>
-              <li><a href="../html/sobre-nosotros.html" class="none">Sobre Nosotros</a></li>
-              <li><a href="../html/blogs.html" class="none">Contacto</a></li>
-            </ul>
-          </div>
+              <div class="col-md-4">
+                  <h5>Enlaces rápidos</h5>
+                  <ul class="footer-links">
+                      <li><a href="../html/index.html" class="none">Home</a></li>
+                      <li><a href="../html/productos.html" class="none">Productos</a></li>
+                      <li><a href="../html/sobre-nosotros.html" class="none">Sobre Nosotros</a></li>
+                      <li><a href="../html/blogs.html" class="none">Contacto</a></li>
+                  </ul>
+              </div>
 
-          <!-- Contacto -->
-          <div class="col-md-4">
-            <h5>Contacto</h5>
-            <ul class="footer-links">
-              <li><a href="https://maps.app.goo.gl/LA3bMz4KLmiopUho9" class="bi bi-geo-alt-fill"> Av. Paicaví 3280,
-                  Concepción,Chile</a></li>
-              <li><a href="mailto:999leveluptienda@gmail.com" class="bi bi-envelope-at-fill">
-                  999leveluptienda@gmail.com</a>
-              </li>
-              <li><a href="tel:+56912345678" class="bi bi-telephone-fill"> +56 9 1234 5678</a></li>
-              <li><a href="https://www.instagram.com/999leveluptienda" class="bi bi-instagram"> Instagram</a>
-              </li>
-            </ul>
-          </div>
+              <div class="col-md-4">
+                  <h5>Contacto</h5>
+                  <ul class="footer-links">
+                      <li><a href="https://maps.app.goo.gl/LA3bMz4KLmiopUho9" class="bi bi-geo-alt-fill"> Av. Paicaví
+                              3280,
+                              Concepción,Chile</a></li>
+                      <li><a href="mailto:999leveluptienda@gmail.com" class="bi bi-envelope-at-fill">
+                              999leveluptienda@gmail.com</a>
+                      </li>
+                      <li><a href="tel:+56912345678" class="bi bi-telephone-fill"> +56 9 1234 5678</a></li>
+                      <li><a href="https://www.instagram.com/999leveluptienda" class="bi bi-instagram"> Instagram</a>
+                      </li>
+                  </ul>
+              </div>
 
-          <hr class="mt-4">
-          <div class="text-center">
-            <small>&copy; 2025 Level-Up. Todos los derechos reservados</small>
-            <ul class="list-inline mt-2">
-              <li class="list-inline-item"><a href="../html/terminos-y-privacidad.html"
-                  class="text-white me-3">Privacidad</i></a></li>
-              <li class="list-inline-item"><a href="../html/terminos-y-condiciones.html"
-                  class="text-white me-3">Terminos</i></a></li>
+              <hr class="mt-4">
+              <div class="text-center">
+                  <small>&copy; 2025 Level-Up. Todos los derechos reservados</small>
+                  <ul class="list-inline mt-2">
+                      <li class="list-inline-item"><a href="../html/politica-y-privacidad.html"
+                              class="text-white me-3">Privacidad</i></a></li>
+                      <li class="list-inline-item"><a href="../html/terminos-y-condiciones.html"
+                              class="text-white me-3">Terminos</i></a></li>
+              </div>
           </div>
-        </div>
-    </footer>
+  </footer>
   </div>
   <script src="../js/navbar.js"></script>
 </body>
