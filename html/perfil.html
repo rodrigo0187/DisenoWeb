@@ -10,6 +10,10 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css" />
     <link rel="stylesheet" href="../css/stylesheet-html-body.css" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/css/stylesheet-perfil.css">
+    <!-- footer -->
+    <link rel="stylesheet" href="/css/stylesheet-footer.css">
 </head>
 
 <body>
@@ -23,8 +27,32 @@
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../html/perfil-editar.html">Editar perfil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../html/mis-pedidos.html">Mis pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/mis-pedidos.html">Mis pedidos <img
+                                src="/img/icon/carrito-32x32.png" alt="">
+                        </a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="../html/index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="../html/productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="../html/blog.html">Blogs</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" href="../html/editar-perfil.html">Editar perfil</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link" id="navLoginBtn" href="../html/inicio_sesion.html">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item mx-1" id="navUserDisplay" style="display: none;">
+                        <a class="nav-link" href="#">Bienvenido, <span id="navUsername"></span></a>
+                    </li>
+
                     <!-- <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li> -->
                 </ul>
             </div>
@@ -33,55 +61,89 @@
 
     <!-- Contenido del perfil -->
     <main class="container my-5">
-        <h1>Bienvenido, <span id="username">Usuario</span></h1>
-        <p>Correo: <span id="useremail">usuario@correo.com</span></p>
+        <div class="card mx-auto shadow p-4" style="max-width: 600px;">
+            <div class="text-center">
+                <img src="../img/icon/LOGO.ico" alt="Avatar" class="rounded-circle mb-3" width="120">
+                <h2 id="username">Usuario</h2>
+                <p id="useremail">usuario@correo.com</p>
+            </div>
+            <hr>
+            <form action=""></form>
 
-        <div class="mt-4">
-            <button id="logoutBtn" class="btn btn-danger">Cerrar sesión</button>
+            <div class="fomulario-perfil">
+                <form action=""></form>
+
+            </div>
+
+            <div class="container ">
+                <a href="../html/editar-perfil.html" class="btn btn-primary">Ver mi perfil</a>
+                <button type="button" id="logoutBtn" class="btn btn-danger">Cerrar sesión</button>
+            </div>
+
+            <hr>
+
+            <h5>Historial de actividad</h5>
+            <ul id="userPosts" class="list-group list-group-flush">
+                <!-- Aquí se agregan dinámicamente los posts del usuario -->
+            </ul>
         </div>
     </main>
 
+
     <!-- Footer -->
-    <footer class="bg-dark text-light text-center p-4 mt-auto">
+    <footer class="footer mt-5">
         <div class="container">
-            <img src="../img/icon/iconlogo.ico" alt="Logo" style="width: 50px" class="mb-3" />
-            <p>© 2025 Level Up Gamer. Todos los derechos reservados.</p>
-            <div class="mb-3">
-                <a href="../html/politica-y-privacidad.html" class="text-light me-3">Política de Privacidad</a>
-                <a href="../html/terminos-y-condiciones.html" class="text-light me-3">Términos y Condiciones</a>
-                <a href="../html/formularioSoporte.html" class="text-light">Contacto</a>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="bi bi-controller"></i>Level-Up</h5>
+                    <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
+                </div>
+
+                <!-- Enlaces rapidos -->
+                <div class="col-md-4">
+                    <h5>Enlaces rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="../html/index.html" class="none">Home</a></li>
+                        <li><a href="../html/productos.html" class="none">Productos</a></li>
+                        <li><a href="../html/sobre-nosotros.html" class="none">Sobre Nosotros</a></li>
+                        <li><a href="../html/blogs.html" class="none">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <ul class="footer-links">
+                        <li><a href="https://maps.app.goo.gl/LA3bMz4KLmiopUho9" class="bi bi-geo-alt-fill"> Av.
+                                Paicaví 3280,
+                                Concepción,Chile</a></li>
+                        <li><a href="mailto:999leveluptienda@gmail.com" class="bi bi-envelope-at-fill">
+                                999leveluptienda@gmail.com</a>
+                        </li>
+                        <li><a href="tel:+56912345678" class="bi bi-telephone-fill"> +56 9 1234 5678</a></li>
+                        <li><a href="https://www.instagram.com/999leveluptienda" class="bi bi-instagram">
+                                Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="mt-4">
+                <div class="text-center">
+                    <small>&copy; 2025 Level-Up. Todos los derechos reservados</small>
+                    <ul class="list-inline mt-2">
+                        <li class="list-inline-item"><a href="../html/terminos-y-privacidad.html"
+                                class="text-white me-3">Privacidad</i></a></li>
+                        <li class="list-inline-item"><a href="../html/terminos-y-condiciones.html"
+                                class="text-white me-3">Terminos</i></a></li>
+                </div>
             </div>
-            <div>
-                <a href="https://facebook.com" target="_blank" class="text-light me-3"><i
-                        class="bi bi-facebook"></i></a>
-                <a href="https://twitter.com" target="_blank" class="text-light me-3"><i class="bi bi-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank" class="text-light me-3"><i
-                        class="bi bi-instagram"></i></a>
-                <a href="https://youtube.com" target="_blank" class="text-light"><i class="bi bi-youtube"></i></a>
-            </div>
-        </div>
     </footer>
 
     <!-- Scripts -->
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Cargar usuario desde sessionStorage
-        const user = JSON.parse(sessionStorage.getItem("user"));
+    <script src="/js/cargar-perfil.js"></script>
+    <script src="../js/navbar.js"></script>
 
-        if (user) {
-            document.getElementById("username").textContent = user.nombre;
-            document.getElementById("useremail").textContent = user.email;
-        } else {
-            // Si no hay usuario, redirigir al login
-            window.location.href = "inicio_sesion.html";
-        }
-
-        // Cerrar sesión
-        document.getElementById("logoutBtn").addEventListener("click", function () {
-            sessionStorage.removeItem("user");
-            window.location.href = "inicio_sesion.html";
-        });
-    </script>
 </body>
 
 </html>

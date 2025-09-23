@@ -4,25 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GameStore - Productos Gamer</title>
+  <title>Level-Up|Tienda Gamer</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome para iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <!-- CSS personalizado de productos -->
-    <link rel="stylesheet" href="../css/stylesheet-productos.css" />
+  <!-- CSS personalizado de productos -->
+  <link rel="stylesheet" href="../css/stylesheet-productos.css" />
 
-    <!-- CSS personalizado de footer -->
-    <link rel="stylesheet" href="../css/stylesheet-footer.css" />
+  <!-- CSS personalizado de footer -->
+  <link rel="stylesheet" href="../css/stylesheet-footer.css" />
 
-    <!-- CSS personalizado de navbar -->
-    <link rel="stylesheet" href="../css/stylesheet-navbar.css" />
+  <!-- CSS personalizado de navbar -->
+  <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css" />
+
 </head>
-
 
 
 <body>
@@ -30,94 +30,240 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top ">
     <div class="container-fluid">
-        <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width: 100px" class="rounded-pill" />
-        <a class="navbar-brand" style="padding-left: 1%" href="#">Level-up Gamer | Carrito</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width: 100px" class="rounded-pill" />
+      <a class="navbar-brand" style="padding-left: 1%" href="../html/index.html">Level-up Gamer | Productos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Links de Navbar -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/blogs.html">Blogs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
-                </li>
+      <!-- Links de Navbar -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/index.html">Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/productos.html">Productos</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/blog.html">Blogs</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
+          </li>
 
-                <li class="nav-item ">
-                    <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a>
-                </li>
-            </ul>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" id="navLoginBtn" href="../html/inicio_sesion.html">Iniciar sesión</a>
+          </li>
+          <li class="nav-item mx-1" id="navUserDisplay" style="display: none;">
+            <a class="nav-link" href="#">Bienvenido, <span id="navUsername"></span></a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="../html/inicio_sesion.html">🛒 </a>
+          </li>
+        </ul>
+  </nav>
 
 
-        </div>
-        <!-- Cart -->
-        <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
-            🛒 Carrito (<span id="cart-count">0</span>)
-        </button>
+  <!-- Sección de hero -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Catálogo de Productos</h1>
+
+      <p class="display-6">Encuentra los mejores productos para gamers al mejor precio</p>
+      <!--<button class="btn btn-gamer btn-lg mt-3">Ver Ofertas <i class="fas fa-arrow-right ms-2"></i></button>-->
     </div>
-</nav>
+  </section>
 
 
-    <!-- Sección de hero -->
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="display-3 fw-bold">Catálogo de Productos</h1>
-
-            <p class="display-6">Encuentra los mejores productos para gamers al mejor precio</p>
-            <!--<button class="btn btn-gamer btn-lg mt-3">Ver Ofertas <i class="fas fa-arrow-right ms-2"></i></button>-->
-        </div>
-
-    </section>
-
-    <!-- SECCIÓN CATEGORÍAS -->
-    <div class="bg-gamer py-3 ">
-        <div class="container">
-            <div class="d-flex flex-wrap gap-2 justify-content-center" id="category-list">
-                <!-- Categorías dinámicas -->
+  </main>
+  <!-- Sección de productos -->
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Producto 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/productos/catan.webp" class="card-img-top" alt="Catan">
+          <div class="card-body">
+            <h5 class="card-title">Catan</h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Juegos de Mesa</span>
             </div>
-        </div>
-    </div>
+            <p class="card-text">Un clásico juego de estrategia donde los jugadores compiten por colonizar y
+              expandirse en la isla de Catan. Ideal para 3-4 jugadores y perfecto para noches de juego en
+              familia o con amigos.</p>
 
-    <!-- PRODUCTOS -->
-    <main class="container my-4">
-        <div class="row" id="product-list">
-            <!-- Productos dinámicos -->
+            <p class="price">$29.990 CLP</p>
+            <button class="btn btn-gamer w-100">Añadir al carrito</button>
+          </div>
         </div>
-    </main>
+      </div>
 
-    <!-- OFFCANVAS CARRITO -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas">
-        <div class="offcanvas-header">
-            <h2 class="offcanvas-title">🛒 Carrito de Compras</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="list-group mb-3" id="cart-items">
-                <!-- Items dinámicos -->
-            </ul>
-            <h4>Total: $<span id="cart-total">0</span></h4>
-            <div class="d-flex justify-content-between mt-3">
-                <button class="btn btn-danger" id="clear-cart">Vaciar</button>
-                <button class="btn btn-success" id="checkout">Pagar</button>
+      <!-- Producto 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/productos/carcassonne.jpg" class="card-img-top" alt="Carcassonne">
+          <div class="card-body">
+            <h5 class="card-title">Carcassonne </h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Juegos de Mesa</span>
             </div>
+            <p class="card-text"> Un juego de colocación de fichas donde los jugadores construyen el paisaje
+              alrededor de la fortaleza medieval de Carcassonne. Ideal para 2-5 jugadores y fácil de
+              aprender.</p>
+            <p class="price">$24.990 CLP</p>
+            <button class="btn btn-gamer w-100">Añadir al carrito</button>
+          </div>
         </div>
-    </div>
+      </div>
 
+      <!-- Producto 3 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/productos/xboxcontrol.jpg" class="card-img-top" alt="Control Xbox">
+          <div class="card-body">
+            <h5 class="card-title">Controlador Inalámbrico Xbox Series X</h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Accesorios</span>
+            </div>
+            <p class="card-text">Ofrece una experiencia de juego cómoda con
+              botones mapeables y una respuesta táctil mejorada. Compatible con consolas Xbox y PC.</p>
+            <p class="price">$59.990 CLP</p>
+            <button class="btn btn-gamer w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/productos/audifonos.png" class="card-img-top" alt="Auriculares HyperX ">
+          <div class="card-body">
+            <h5 class="card-title">Auriculares Gamer HyperX Cloud II </h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Accesorios</span>
+            </div>
+            <p class="card-text">Proporcionan un sonido envolvente de calidad con un
+              micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad
+              durante largas sesiones de juego.</p>
+            <p class="price">$79.990 CLP</p>
+            <button class="btn btn-gamer w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/productos/play5.webp" class="card-img-top" alt="Play5">
+          <div class="card-body">
+            <h5 class="card-title">PlayStation 5</h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Consolas</span>
+            </div>
+            <p class="card-text">La consola de última generación de Sony, que ofrece gráficos
+              impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva.</p>
+            <p class="price">$549.990 CLP</p>
+            <button class="btn btn-gamer w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/productos/pcgamer.webp" class="card-img-top" alt="Pc Gamer">
+          <div class="card-body">
+            <h5 class="card-title">PC Gamer ASUS ROG Strix </h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Computadores Gamers</span>
+            </div>
+            <p class="card-text">Un potente equipo diseñado para los gamers más exigentes,
+              equipado con los últimos componentes para ofrecer un rendimiento excepcional en
+              cualquier juego.</p>
+            <p class="price">$1.299.990 CLP</p>
+            <button class="btn btn-gamer w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/productos/sillagamer.jpg" class="card-img-top" alt="Silla Gamer">
+          <div class="card-body">
+            <h5 class="card-title">Silla Gamer Secretlab Titan </h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Sillas Gamers</span>
+            </div>
+            <p class="card-text">Diseñada para el máximo confort, esta silla ofrece un soporte
+              ergonómico y personalización ajustable para sesiones de juego prolongadas.</p>
+            <p class="price">$349.990 CLP</p>
+            <button class="btn btn-gamer w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/productos/mouse.webp" class="card-img-top" alt="Mouse">
+          <div class="card-body">
+            <h5 class="card-title">Mouse Gamer Logitech G502 HERO </h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Mouse</span>
+            </div>
+            <p class="card-text">Con sensor de alta precisión y botones
+              personalizables, este mouse es ideal para gamers que buscan un control preciso y
+              personalización</p>
+            <p class="price">$49.990 CLP</p>
+            <button class="btn btn-gamer w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 9 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/productos/mousepad.webp" class="card-img-top" alt="Mousepad">
+          <div class="card-body">
+            <h5 class="card-title">Mousepad Razer Goliathus Extended Chroma</h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Mousepad</span>
+            </div>
+            <p class="card-text">Ofrece un área de juego amplia con
+              iluminación RGB personalizable, asegurando una superficie suave y uniforme para el
+              movimiento del mouse.</p>
+            <p class="price">$29.990 CLP</p>
+            <button class="btn btn-gamer w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 10 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="../img/productos/Polera.jpg" class="card-img-top" alt="Polera">
+          <div class="card-body">
+            <h5 class="card-title">Polera Gamer Personalizada 'Level-Up'</h5>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-success">Poleras Personalizadas</span>
+            </div>
+            <p class="card-text">Una camiseta cómoda y estilizada, con la
+              posibilidad de personalizarla con tu gamer tag o diseño favorito</p>
+            <p class="price">$14.990 CLP</p>
+            <button class="btn btn-gamer w-100">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer mt-5">
@@ -128,6 +274,7 @@
           <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
         </div>
 
+        <!-- Enlaces rapidos -->
         <div class="col-md-4">
           <h5>Enlaces rápidos</h5>
           <ul class="footer-links">
@@ -138,6 +285,7 @@
           </ul>
         </div>
 
+        <!-- Contacto -->
         <div class="col-md-4">
           <h5>Contacto</h5>
           <ul class="footer-links">
@@ -156,7 +304,7 @@
         <div class="text-center">
           <small>&copy; 2025 Level-Up. Todos los derechos reservados</small>
           <ul class="list-inline mt-2">
-            <li class="list-inline-item"><a href="../html/politica-y-privacidad.html"
+            <li class="list-inline-item"><a href="../html/terminos-y-privacidad.html"
                 class="text-white me-3">Privacidad</i></a></li>
             <li class="list-inline-item"><a href="../html/terminos-y-condiciones.html"
                 class="text-white me-3">Terminos</i></a></li>
@@ -164,9 +312,9 @@
       </div>
   </footer>
 
-    <!-- JS -->
-    <script src="../js/carrito.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="../js/navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

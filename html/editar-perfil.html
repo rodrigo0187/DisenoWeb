@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet Boostrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- style navbar -->
+    <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/css/stylesheet-editar-perfil.css">
+    <link rel="stylesheet" href="/css/stylesheet-footer.css">
+
+    <title>Mi perfil</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <nav class="navbar navbar-expand-sm navbar-dark navbar-custom">
+            <div class="container-fluid">
+                <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+                <a class="navbar-brand" style="padding-left: 1%;" href="#">Level up Gamer</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="navbar-item mx-1">
+                            <a class="nav-link" href="../html/productos.html">Nuestros productos</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link" href="../html/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="nav-link" id="navLoginBtn" href="../html/inicio_sesion.html">Iniciar sesión</a>
+                        </li>
+                        <li class="nav-item mx-1" id="navUserDisplay" style="display: none;">
+                            <a class="nav-link" href="#">Bienvenido, <span id="navUsername"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h2>Mi Perfil</h2>
+        <div class="login-container">
+            <form id="perfilForm" style="border: 1px solid #ccc">
+                <div class="form-group">
+                    <div class="text-center">
+                        <img src="../img/icon/LOGO.ico" alt="Avatar" class="rounded-circle mb-3" width="120">
+                        <h2 id="username">Usuario</h2>
+                        <p id="useremail">usuario@correo.com</p>
+                    </div>
+
+                    <label for="nombrecompleto">Nombre completo</label>
+                    <input type="text" id="nombrecompleto" name="nombrecompleto" required>
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+
+                    <label for="psw">Contraseña</label>
+                    <input type="password" id="psw" name="psw">
+
+                    <label for="repeat-password">Repetir password</label>
+                    <input type="password" id="repeat-password" name="repeat-password"><br><br>
+
+                    <button type="submit">Guardar cambios</button>
+                    <button type="button" id="logoutBtn">Cerrar sesión</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div id="actividad">
+            <h3>Actividad reciente</h3>
+            <ul id="listaActividad"></ul>
+        </div>
+
+
+        <!-- Modal de verificación -->
+        <div id="passwordModal" class="modal">
+            <div class="modal-content">
+                <h3>Verificación</h3>
+                <p>Ingrese su contraseña para confirmar.</p>
+                <input type="password" id="verifyPassword" placeholder="contraseña"><br><br>
+                <button id="confirmBtn">Confirmar</button>
+                <button id="cancelBtn">Cancelar</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5><i class="bi bi-controller"></i>Level-Up</h5>
+                        <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
+                    </div>
+
+                    <!-- Enlaces rapidos -->
+                    <div class="col-md-4">
+                        <h5>Enlaces rápidos</h5>
+                        <ul class="footer-links">
+                            <li><a href="../html/index.html" class="none">Home</a></li>
+                            <li><a href="../html/productos.html" class="none">Productos</a></li>
+                            <li><a href="../html/sobre-nosotros.html" class="none">Sobre Nosotros</a></li>
+                            <li><a href="../html/blogs.html" class="none">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div class="col-md-4">
+                        <h5>Contacto</h5>
+                        <ul class="footer-links">
+                            <li><a href="https://maps.app.goo.gl/LA3bMz4KLmiopUho9" class="bi bi-geo-alt-fill"> Av.
+                                    Paicaví 3280,
+                                    Concepción,Chile</a></li>
+                            <li><a href="mailto:999leveluptienda@gmail.com" class="bi bi-envelope-at-fill">
+                                    999leveluptienda@gmail.com</a>
+                            </li>
+                            <li><a href="tel:+56912345678" class="bi bi-telephone-fill"> +56 9 1234 5678</a></li>
+                            <li><a href="https://www.instagram.com/999leveluptienda" class="bi bi-instagram">
+                                    Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr class="mt-4">
+                    <div class="text-center">
+                        <small>&copy; 2025 Level-Up. Todos los derechos reservados</small>
+                        <ul class="list-inline mt-2">
+                            <li class="list-inline-item"><a href="../html/terminos-y-privacidad.html"
+                                    class="text-white me-3">Privacidad</i></a></li>
+                            <li class="list-inline-item"><a href="../html/terminos-y-condiciones.html"
+                                    class="text-white me-3">Terminos</i></a></li>
+                    </div>
+                </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../js/editar-perfil.js"></script>
+        <script src="../js/cargar-perfil.js"></script>
+        <script src="../js/navbar.js"></script>
+</body>
+
+</html>

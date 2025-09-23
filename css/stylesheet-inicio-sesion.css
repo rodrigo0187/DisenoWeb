@@ -1,0 +1,65 @@
+/* Centrar y limitar el tamaño del formulario */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ocupa casi toda la pantalla */
+}
+body {
+  background: url("../img/img-inicio-sesion.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+  background: rgba(52, 58, 64, 0.7); /* 70% opaco, 30% transparente */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(5px); /* efecto de desenfoque detrás del form */
+}
+
+/* Ajustar inputs */
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 20px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Botones */
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #7213fe;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+form button:hover {
+  background-color:#b989ff;
+}
+.avatar {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 70px;
+  height: auto;
+}
+/* Mensajes de error */
+.error-msg {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: center;
+}
