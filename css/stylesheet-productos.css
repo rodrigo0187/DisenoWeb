@@ -5,14 +5,6 @@ body {
     padding-top: 100px;
 }
 
-<<<<<<< HEAD
-=======
-h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 600;
-    color: var(--neon-green);
-}
->>>>>>> rama-rodrigo
 @font-face {
     font-family: 'Orbitron';
     src: url('../fonts/Orbitron-VariableFont_wght.ttf') format('woff2');
@@ -23,7 +15,6 @@ h1 {
     font-display: swap;
 }
 
-<<<<<<< HEAD
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-VariableFont_wdth_wght.ttf') format('woff2');
@@ -35,14 +26,10 @@ h1 {
 }
 
 h2,h1, h5{
-=======
-h1, h5 {
->>>>>>> rama-rodrigo
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
     color: var(--neon-green);
 }
-<<<<<<< HEAD
 p, h4{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -54,8 +41,6 @@ p, h4{
     font-weight: 600;
     color: #ffffff;
 }
-=======
->>>>>>> rama-rodrigo
 
 :root {
     --electric-blue: #1E90FF;
@@ -79,13 +64,6 @@ p, h4{
     box-shadow: 0 10px 20px rgba(55, 255, 20, 0.562);
 }
 
-<<<<<<< HEAD
-=======
-.card-title {
-    font-weight: bold;
-}
-
->>>>>>> rama-rodrigo
 .price {
     color: var(--neon-green);
     font-weight: bold;
@@ -109,12 +87,9 @@ p, h4{
     text-align: center;
 }
 
-<<<<<<< HEAD
 .fw-bold{
     color: var(--neon-green);
 }
-=======
->>>>>>> rama-rodrigo
 
 .btn-gamer {
     background-color: #500570;
@@ -127,10 +102,7 @@ p, h4{
 .btn-gamer:hover {
     background-color: #6f079c;
     transform: scale(1.05);
-<<<<<<< HEAD
     color: rgb(255, 255, 255);
-=======
->>>>>>> rama-rodrigo
 }
 
 .hero-section {
@@ -138,7 +110,6 @@ p, h4{
         url('../img/imgHero.webp') no-repeat center center;
     background-size: cover;
     padding: 7rem 0;
-<<<<<<< HEAD
     text-align: center;
 
 }
@@ -161,9 +132,4 @@ p, h4{
 
 .btn-close{
     background-color: #ffffff;
-=======
-    margin-bottom: 3rem;
-    text-align: center;
-
->>>>>>> rama-rodrigo
 }
