@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../css/stylesheet-footer.css" />
 
   <!-- CSS personalizado de navbar -->
-  <link rel="stylesheet" href="../css/stylesheet-navbar.css" />
+  <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css" />
 </head>
 
 <body>
@@ -36,7 +36,7 @@
             <a class="nav-link" href="../html/index.html" style="width:100%;">Home</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link" href="../html/productos.html">Productos</a>
+            <a class="nav-link" href="../html/productos.html">Nuestros Productos</a>
           </li>
           <li class="nav-item mx-1">
             <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
@@ -47,29 +47,31 @@
           <li class="nav-item mx-1">
             <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
           </li>
-
           <li class="nav-item mx-1">
             <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a>
+            <a class="nav-link" id="navLoginBtn" href="../html/inicio_sesion.html">Iniciar sesión</a>
           </li>
-          <li class="nav-item mx-1">
+          <li class="nav-item mx-1" id="navUserDisplay" style="display: none;">
+            <a class="nav-link" href="#">Bienvenido, <span id="navUsername"></span></a>
+          </li>
+          <!-- <li class="nav-item mx-1">
             <a class="nav-link" href="../html/inicio_sesion.html">🛒 </a>
-          </li>
+          </li> -->
         </ul>
   </nav>
   <!-- Sección de hero -->
-        <section class="hero-section">
-            <div class="container">
-                <h1 class="display-3 fw-bold">Sobre Nosotros</h1>
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="display-3 fw-bold">Sobre Nosotros</h1>
 
-                <p class="display-6">Aprende mas sobre nuestros objetivos y quienes somos.</p>
-                <!--<button class="btn btn-gamer btn-lg mt-3">Ver Ofertas <i class="fas fa-arrow-right ms-2"></i></button>-->
-            </div>
-        </section>
+      <p class="display-6">Aprende mas sobre nuestros objetivos y quienes somos.</p>
+      <!--<button class="btn btn-gamer btn-lg mt-3">Ver Ofertas <i class="fas fa-arrow-right ms-2"></i></button>-->
+    </div>
+  </section>
 
-  
+
   <div class="row">
     <div class="column">
       <div class="card h-100">
@@ -81,7 +83,7 @@
             pandemia, Leves-Up Gamer ofrece una amplia gama de productos para gamers, desde consolas y
             accesorios hasta computadores y sillas especializadas. Aunque no cuenta con una ubicación física,
             realiza despachos a todo el país.</p>
-          
+
         </div>
       </div>
     </div>
@@ -94,7 +96,7 @@
           <p>Proporcionar productos de alta calidad para gamers en todo Chile, ofreciendo una experiencia de
             compra única y personalizada, con un enfoque en la satisfacción del cliente y el crecimiento de la
             comunidad gamer.</p>
-          
+
         </div>
       </div>
     </div>
@@ -104,11 +106,11 @@
         <img src="../img/imgHero3.jpg" alt="John" style="width: 100%" />
         <div class="container">
           <h2>Vision</h2>
-          
+
           <p>Ser la tienda online líder en productos para gamers en Chile, reconocida por su innovación, servicio
             al cliente excepcional, y un programa de fidelización basado en gamificación que recompense a
             nuestros clientes más fieles.</p>
-          
+
         </div>
       </div>
     </div>
@@ -162,6 +164,7 @@
         </div>
     </footer>
   </div>
+  <script src="../js/navbar.js"></script>
 </body>
 
 </html>

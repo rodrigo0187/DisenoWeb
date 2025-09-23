@@ -50,24 +50,22 @@ input[type=submit]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  /* ocupa casi toda la pantalla */
+  min-height: 80vh; /* ocupa casi toda la pantalla */
+}
+body {
+  background: url("../img/teclado2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 form {
-  margin: 30px;
-  background-color: #1a1a2e;
-
+  background: rgba(52, 58, 64, 0.9); /* fondo oscuro semitransparente */
   padding: 30px;
-  padding-bottom: 30px;
-  border-radius: 10px;
- background-color: #292949;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 15px 15px 15px rgba(255, 0, 234, 0.493);
+  border-radius: 10% 1%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   width: 100%;
-  max-width: 320px;
-  /* el formulario no se pasa de este ancho */
+  max-width: 400px;
 }
 
 /* Ajustar inputs */
@@ -139,5 +137,47 @@ label {
 /* Para el select en sí, cuando tiene un valor seleccionado */
 #country:focus {
   outline: none;
-  border-color: #7213fe;
+  border-color:  #7213fe;
 }
+
+    /* Personalización del formulario */
+    .formulario label {
+      color: white;
+      /* labels en blanco */
+    }
+
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid #ccc;
+    }
+
+    .formulario input::placeholder,
+    .formulario textarea::placeholder {
+      color: #eee;
+    }
+
+    .contenedor-form-mapa {
+      display: flex;
+      gap: 20px;
+      align-items: stretch;
+      /* alinea el bottom del mapa y formulario */
+      margin-top: 20px;
+      
+    }
+
+    .contenedor-form-mapa .formulario,
+    .contenedor-form-mapa .mapa {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contenedor-form-mapa .mapa iframe {
+      flex: 1;
+      width: 100%;
+      border: 0;
+      border-radius: 1% 10%;
+    }

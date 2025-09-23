@@ -1,11 +1,15 @@
 html {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 body {
   margin: 0;
   background-color: #0f0f1a;
     color: #ffffff;
     font-family: 'Roboto',  sans-serif;
+margin: 0;
+background-color: #0f0f1a;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .termino{
@@ -23,13 +27,17 @@ text-align: center;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Orbitron';
-    src: url('../fonts/Orbitron-VariableFont_wght.ttf')format('truetype');
+  font-family: 'Orbitron';
+  src: url('../fonts/Orbitron-VariableFont_wght.ttf')format('truetype');
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Italic-VariableFont_wdth_wght.ttf')format('truetype');
+}
 
 h2{
-    font-family: 'Orbitron',sans-serif;
+  font-family: 'Orbitron',sans-serif;
 }
 
 p{
@@ -37,8 +45,8 @@ font-family: 'Roboto',sans-serif;
 }
 
 p a{
-  text-decoration: none;
-  color:#BC13FE;
+text-decoration: none;
+color:#BC13FE;
 }
 
 
