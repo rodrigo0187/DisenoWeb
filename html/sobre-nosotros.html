@@ -17,50 +17,12 @@
 
   <!-- CSS personalizado de navbar -->
   <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css" />
+
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top ">
-    <div class="container-fluid">
-      <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width: 100px" class="rounded-pill" />
-      <a class="navbar-brand" style="padding-left: 1%" href="../html/index.html">Level-up Gamer | Sobre Nosotros</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Links de Navbar -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item mx-1">
-            <a class="nav-link" href="../html/index.html" style="width:100%;">Home</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link" href="../html/productos.html">Productos</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link" href="../html/blog.html">Blogs</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
-          </li>
-          <li class="nav-item mx-1">
-            <a class="nav-link" id="navLoginBtn" href="../html/inicio_sesion.html">Iniciar sesión</a>
-          </li>
-          <li class="nav-item mx-1" id="navUserDisplay" style="display: none;">
-            <a class="nav-link" href="#">Bienvenido, <span id="navUsername"></span></a>
-          </li>
-          <!-- <li class="nav-item mx-1">
-            <a class="nav-link" href="../html/inicio_sesion.html">🛒 </a>
-          </li> -->
-        </ul>
-  </nav>
+  <div id="navbarContainer"></div>
   <!-- Sección de hero -->
   <section class="hero-section">
     <div class="container">
@@ -157,14 +119,15 @@
             <small>&copy; 2025 Level-Up. Todos los derechos reservados</small>
             <ul class="list-inline mt-2">
               <li class="list-inline-item"><a href="../html/terminos-y-privacidad.html"
-                  class="text-white me-3">Privacidad</i></a></li>
+                  class="text-white me-3"><i>Privacidad</i></a></li>
               <li class="list-inline-item"><a href="../html/terminos-y-condiciones.html"
-                  class="text-white me-3">Terminos</i></a></li>
+                  class="text-white me-3"><i>Terminos</i></a></li>
           </div>
         </div>
     </footer>
   </div>
   <script src="../js/navbar.js"></script>
+  <script src="../js/validacion-inicio-sesion.js"></script>
 </body>
 
 </html>

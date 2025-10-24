@@ -2,85 +2,129 @@
 body {
   background: url("../img/img-registro-usuario.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: #ffffff;
+  color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
+  padding: 0;
 }
 
-/* Contenedor centrado solo para el form */
+/* Contenedor centrado */
 .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 60px auto; /* margen superior e inferior */
-  width: 100%;
-}
-
-/* Formulario transparente tipo glassmorphism */
-.register-container form {
-  background: rgba(52, 58, 64, 0.7); /* semitransparente */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  max-width: 400px;
-  backdrop-filter: blur(5px);
-}
-
-/* Inputs */
-.register-container input[type="text"],
-.register-container input[type="password"],
-.register-container input[type="email"],
-.register-container input[type="tel"] {
-  width: 100%;
+  min-height: 100vh; /* ocupa toda la pantalla */
   padding: 10px;
-  margin: 6px 0 15px 0;
+  padding-top: 40px;
+}
+
+/* Formulario ultra-compacto */
+.register-container form {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 12px;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+/* Títulos y párrafos */
+.register-container h1 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.register-container p {
+  font-size: 12px;
+  margin: 2px 0 8px 0;
+  text-align: center;
+}
+
+/* Inputs compactos */
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="tel"],
+.register-container input[type="password"] {
+  width: 100%;
+  padding: 6px 8px;
+  margin: 4px 0 6px 0;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.1); /* input ligeramente transparente */
+  border-radius: 4px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
+  box-sizing: border-box;
 }
 
 /* Placeholder */
 .register-container input::placeholder {
-  color: #e0e0e0;
+  color: #ccc;
+  font-size: 11px;
 }
 
-/* Botones */
+/* Mensajes de error */
+.text-danger {
+  font-size: 10px;
+  margin: 2px 0 4px 0;
+  display: block;
+}
+
+/* Botones compactos */
 .register-container button {
-  width: 45%;
-  padding: 8px;
-  margin-top: 10px;
+  width: 48%;
+  padding: 5px;
+  margin-top: 6px;
+  font-size: 12px;
   border: none;
-  border-radius: 5px;
-  font-size: 15px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
+/* Botón cancelar */
 .cancelbtn {
   background-color: #7213fe;
   color: #fff;
 }
 
-.cancelbtn:hover {
-  background-color: #b989ff;
-}
-
+/* Botón enviar */
 .signupbtn {
   background-color: #7213fe;
   color: #fff;
   float: right;
-  transition: all 0.3s ease;
 }
 
+/* Hover efecto */
+.cancelbtn:hover,
 .signupbtn:hover {
   background-color: #b989ff;
 }
 
 /* Asterisco */
 #asterisco {
-  font-size: 14px;
+  font-size: 10px;
   font-style: italic;
+  text-align: center;
 }
+
+/* Responsive: en pantallas muy pequeñas */
+@media (max-width: 360px) {
+  .register-container form {
+    padding: 10px;
+  }
+  .register-container h1 {
+    font-size: 16px;
+  }
+  .register-container p {
+    font-size: 11px;
+  }
+  .register-container input,
+  .register-container button {
+    font-size: 11px;
+    padding: 5px;
+  }
+}
+.page-container {
+  padding-top: 70px;
+}
+

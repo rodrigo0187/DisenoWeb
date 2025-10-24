@@ -3,6 +3,7 @@
     padding: 2rem 0;
     margin-top: 3rem;
     width: 100%;
+    border-top: 2px solid var(--neon-green);
 }
 
 .footer-links a {
@@ -20,7 +21,7 @@ body {
     background-color: #0f0f1a;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
-    padding-top: 100px;
+    /* padding-top: 100px; */
     width: 100%;
 }
 
@@ -43,4 +44,5 @@ h5 {
     --electric-blue: #1E90FF;
     --neon-green: #39FF14;
 }
+
 

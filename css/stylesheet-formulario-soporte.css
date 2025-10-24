@@ -1,183 +1,162 @@
-/* Style inputs with type="text", select elements and textareas */
-input[type=text],
-select,
-textarea {
-  width: 100%;
-  /* Full width */
-  padding: 12px;
-  /* Some padding */
-  border: 1px solid #ccc;
-  /* Gray border */
-  border-radius: 4px;
-  /* Rounded borders */
+/* ==============================
+   RESET GLOBAL
+============================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background: url("../img/teclado2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 80px; /* espacio para navbar fijo */
   box-sizing: border-box;
-  /* Make sure that padding and width stays in place */
-  margin-top: 6px;
-  /* Add a top margin */
-  margin-bottom: 16px;
-  /* Bottom margin */
-  resize: vertical
-    /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit].btn {
-  /* background-color: #04AA6D; */
-  background-color: #500570;
-  border: none;
-  color: rgb(255, 255, 255);
-  transition: all 0.3s ease;
-  font-weight: 700;
-}
-
-
-/* Add a background color and some padding around the form */
-/* .container {
-  border-radius: 5px;
-  background-color: #7213fe;
-  padding: 20px;
-} */
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  /* background-color: #45a049; */
-  /* background-color: #BC13FE; */
-  background-color: #6f079c;
-  transform: scale(1.05);
-}
-
-/* Centrar y limitar el tamaño del formulario */
+/* ==============================
+   CONTENEDORES GENERALES
+============================== */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* ocupa casi toda la pantalla */
-}
-body {
-  background: url("../img/teclado2.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: calc(100vh - 80px); /* descuenta navbar */
+  flex-direction: column;
 }
 
+.contenedor-form-mapa {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ==============================
+   FORMULARIO
+============================== */
 form {
-  background: rgba(52, 58, 64, 0.9); /* fondo oscuro semitransparente */
-  padding: 30px;
-  border-radius: 10% 1%;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  background: rgba(52, 58, 64, 0.9);
+  padding: 40px;
+  border-radius: 6px;
   width: 100%;
   max-width: 400px;
-}
-
-/* Ajustar inputs */
-form input[type="text"],
-form input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0 20px 0;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.mapa{
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid rgba(255, 0, 234, 0.493);
-    height: 100%;
-    position: relative;
-}
-
-.mapa:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(255, 0, 234, 0.493);
-}
-
-/* Botones */
-form button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #7213fe;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #b989ff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 label {
-  color: #ffff;
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
 }
 
-/* Estilo general del select */
+form input[type="text"],
+form input[type="password"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #eee;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ==============================
+   SELECT
+============================== */
 #country {
   background-color: #f0f0f0;
-  /* Fondo por defecto */
   color: #333;
-  /* Color de texto por defecto */
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 8px 10px;
 }
 
-/* Estilo cuando se selecciona una opción */
 #country option:checked {
   background-color: #7213fe;
-  /* Fondo de la opción seleccionada */
   color: white;
-  /* Color del texto de la opción seleccionada */
 }
 
-/* Para el select en sí, cuando tiene un valor seleccionado */
 #country:focus {
   outline: none;
-  border-color:  #7213fe;
+  border-color: #7213fe;
 }
 
-    /* Personalización del formulario */
-    .formulario label {
-      color: white;
-      /* labels en blanco */
-    }
+/* ==============================
+   BOTONES
+============================== */
+form button,
+input[type=submit].btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #7213fe;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
 
-    .formulario input,
-    .formulario select,
-    .formulario textarea {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: white;
-      border: 1px solid #ccc;
-    }
+form button:hover,
+input[type=submit].btn:hover {
+  background-color: #b989ff;
+  transform: scale(1.05);
+}
 
-    .formulario input::placeholder,
-    .formulario textarea::placeholder {
-      color: #eee;
-    }
+/* ==============================
+   MAPA
+============================== */
+.mapa {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 0, 234, 0.493);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex: 1;
+}
 
-    .contenedor-form-mapa {
-      display: flex;
-      gap: 20px;
-      align-items: stretch;
-      /* alinea el bottom del mapa y formulario */
-      margin-top: 20px;
-      
-    }
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 6px;
+}
 
-    .contenedor-form-mapa .formulario,
-    .contenedor-form-mapa .mapa {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
+.mapa:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 0, 234, 0.493);
+}
 
-    .contenedor-form-mapa .mapa iframe {
-      flex: 1;
-      width: 100%;
-      border: 0;
-      border-radius: 1% 10%;
-    }
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  .contenedor-form-mapa {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .login-container {
+    min-height: auto;
+    padding-bottom: 30px;
+  }
+}

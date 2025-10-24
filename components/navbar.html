@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
+    <div class="container-fluid">
+        <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width: 100px" class="rounded-pill" />
+        <a class="navbar-brand" style="padding-left: 1%" href="../html/index.html">Level-up Gamer</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item mx-1"><a class="nav-link" href="../html/index.html">Home</a></li>
+                <li class="nav-item mx-1"><a class="nav-link" href="../html/productos.html">Productos</a></li>
+                <li class="nav-item mx-1"><a class="nav-link" href="../html/soporte.html">Soporte</a></li>
+                <li class="nav-item mx-1"><a class="nav-link" href="../html/blog.html">Blogs</a></li>
+                <li class="nav-item mx-1"><a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item mx-1"><a class="nav-link" href="../html/registro.html">Registro</a></li>
+
+                <!-- Botón Iniciar -->
+                <li class="nav-item mx-1" id="navLoginBtn">
+                    <a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a>
+                </li>
+
+                <!-- Bienvenido usuario -->
+                <li class="nav-item mx-1" id="navUserDisplay" style="display: none;">
+                    <a class="nav-link" href="#">Bienvenido, <span id="navUsername"></span></a>
+                </li>
+
+                <!-- Botón Cerrar Sesión -->
+                <li class="nav-item mx-1" id="navLogoutBtn" style="display: none;">
+                    <a class="nav-link" href="#" onclick="logout()">Cerrar sesión</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
