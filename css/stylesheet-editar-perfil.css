@@ -5,7 +5,7 @@ html, body {
   box-sizing: border-box;
 }
 form {
-  background: rgba(52, 58, 64, 0.9); /* fondo oscuro semitransparente */
+  background: rgba(52, 58, 64, 0.9);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
@@ -14,10 +14,12 @@ form {
 }
 
 body {
-  background: url("../img/teclado2.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif; 
+    color: #ffffff;
+    background: url("../img/teclado2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    
 }
 .form-group input[type="text"],
 .form-group input[type="password"],
@@ -63,11 +65,8 @@ h3{
   color: #39ff14;
 }
 
-
-/* style modal */
-/* Fondo oscuro del modal */
 .modal {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -78,7 +77,6 @@ h3{
   background-color: rgba(0,0,0,0.6);
 }
 
-/* Caja del modal */
 .modal-content {
   background-color: #fff;
   margin: 15% auto;
@@ -89,7 +87,6 @@ h3{
   box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Estilos de los botones */
 button {
   margin: 5px;
   padding: 8px 16px;
@@ -114,3 +111,7 @@ button {
     min-height: 100vh; /* centra el contenido en toda la pantalla */
     margin-top: 40px;
   }
+  :root {
+    --electric-blue: #1E90FF;
+    --neon-green: #39FF14;
+}

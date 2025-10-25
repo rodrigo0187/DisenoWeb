@@ -8,6 +8,7 @@ body{
     min-height: 100vh; /* altura restante excluyendo navbar y footer */
        display: flex;
     flex-direction: column;
+    margin-top: 80px;
 }
 
 
@@ -86,3 +87,7 @@ main {
     font-size: 14px;
 }
 
+:root {
+    --electric-blue: #1E90FF;
+    --neon-green: #39FF14;
+}

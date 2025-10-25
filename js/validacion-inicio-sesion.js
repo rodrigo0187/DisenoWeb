@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    if (passwordInput.length < 4 || passwordInput.length > 10) {
+    if (passwordInput.length < 6 || passwordInput.length > 10) {
       alert("La contraseña debe tener entre 6 y 10 caracteres.");
       return;
     }
@@ -23,16 +23,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (usuarioValido) {
       const nombreFormateado = usuarioValido.nombre.charAt(0).toUpperCase() + usuarioValido.nombre.slice(1);
-
-      // ✅ Importante: guardar nombre
+      // guardar el rol usuario
       localStorage.setItem("usuarioLogeado", nombreFormateado);
+      // guarda al rol administrador
+      localStorage.setItem("rolUsuario", usuarioValido.role || "user");
 
       alert(`Bienvenido ${nombreFormateado}`);
-      window.location.href = "perfil.html";
+      if (usuarioValido.role === "admin") {
+        window.location.href = "../html/perfilAdmin.html";
+      }
+      else {
+        window.location.href = "../html/perfil.html";
+      }
     } else {
-      alert("Usuario o contraseña incorrectos.");
+      alert("!Usuario o contrasena invalidas")
     }
-  });
+
+  }
+  );
 
   const cancelBtn = document.querySelector(".cancelbtn");
   if (cancelBtn) {

@@ -48,3 +48,10 @@
     font-style: normal;
     font-display: swap;
 }
+
+@media screen and(max-width:500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}

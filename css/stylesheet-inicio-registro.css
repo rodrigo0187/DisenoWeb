@@ -128,3 +128,7 @@ body {
   padding-top: 70px;
 }
 
+:root {
+    --electric-blue: #1E90FF;
+    --neon-green: #39FF14;
+}

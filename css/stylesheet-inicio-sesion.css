@@ -68,3 +68,7 @@ form button:hover {
   margin-top: 5px;
   text-align: center;
 }
+:root {
+    --electric-blue: #1E90FF;
+    --neon-green: #39FF14;
+}

@@ -1,20 +1,22 @@
 // -----------------------------
-// Cargar usuario y historial
+// Obtener usuario
 // -----------------------------
 const user = JSON.parse(localStorage.getItem("user"));
-const userPosts = document.getElementById("userPosts");
-
 if (!user) {
     window.location.href = "inicio_sesion.html";
 }
 
-// Asegurarse de que exista el historial
-if (!user.activity) user.activity = [];
+// Inicializar arrays si no existen
+user.activity = user.activity || [];
+user.compras = user.compras || [];
+user.productosVistos = user.productosVistos || [];
 
 // -----------------------------
-// Función para renderizar historial
+// Funciones de renderizado
 // -----------------------------
 function renderActividad() {
+    const userPosts = document.getElementById("userPosts");
+    if (!userPosts) return;
     userPosts.innerHTML = "";
     user.activity.slice().reverse().forEach(evento => {
         const li = document.createElement("li");
@@ -23,8 +25,30 @@ function renderActividad() {
     });
 }
 
+function renderCompras() {
+    const userCompras = document.getElementById("userCompras");
+    if (!userCompras) return;
+    userCompras.innerHTML = "";
+    user.compras.forEach(juego => {
+        const li = document.createElement("li");
+        li.textContent = `${juego.fecha} - ${juego.nombre}`;
+        userCompras.appendChild(li);
+    });
+}
+
+function renderProductosVistos() {
+    const userProductos = document.getElementById("userProductosVistos");
+    if (!userProductos) return;
+    userProductos.innerHTML = "";
+    user.productosVistos.forEach(producto => {
+        const li = document.createElement("li");
+        li.textContent = producto;
+        userProductos.appendChild(li);
+    });
+}
+
 // -----------------------------
-// Función para agregar actividad
+// Agregar actividad
 // -----------------------------
 function addActividad(descripcion) {
     const fecha = new Date().toLocaleString();
@@ -34,26 +58,74 @@ function addActividad(descripcion) {
 }
 
 // -----------------------------
-// Mostrar usuario
+// Agregar compra
 // -----------------------------
-document.getElementById("username").textContent = user.username;
-document.getElementById("useremail").textContent = user.email;
+function comprarJuego(nombreJuego) {
+    const fecha = new Date().toLocaleString();
+    user.compras.push({ nombre: nombreJuego, fecha });
+    addActividad(`Compró el juego: ${nombreJuego}`);
+    localStorage.setItem("user", JSON.stringify(user));
+    renderCompras();
+}
 
-// Renderizar historial inicial
-renderActividad();
+// -----------------------------
+// Actualizar datos del perfil
+// -----------------------------
+const usernameElem = document.getElementById("username");
+const useremailElem = document.getElementById("useremail");
+const perfilImagen = document.getElementById("perfilImagen");
+
+if (usernameElem) usernameElem.textContent = user.username;
+if (useremailElem) useremailElem.textContent = user.email;
+if (perfilImagen && user.imagen) perfilImagen.src = user.imagen;
+
+// -----------------------------
+// Cambio de foto de perfil
+// -----------------------------
+const inputFoto = document.getElementById("cambiarFoto");
+const btnSubirFoto = document.getElementById("btnSubirFoto");
+
+if (inputFoto && btnSubirFoto && perfilImagen) {
+    let nuevaFoto = null;
+
+    inputFoto.addEventListener("change", function () {
+        const archivo = this.files[0];
+        if (archivo) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                perfilImagen.src = e.target.result; // vista previa
+                nuevaFoto = e.target.result;        // guardar base64
+            }
+            reader.readAsDataURL(archivo);
+        }
+    });
+
+    btnSubirFoto.addEventListener("click", function () {
+        if (nuevaFoto) {
+            user.imagen = nuevaFoto;
+            localStorage.setItem("user", JSON.stringify(user));
+            alert("Foto de perfil actualizada");
+        } else {
+            alert("Seleccione una imagen primero");
+        }
+    });
+}
 
 // -----------------------------
 // Cerrar sesión
 // -----------------------------
-document.getElementById("logoutBtn").addEventListener("click", function () {
-    addActividad("Cierre de sesión");
-    localStorage.removeItem("user");
-    window.location.href = "/html/inicio_sesion.html";
-});
+const logoutBtn = document.getElementById("logoutBtn");
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+        addActividad("Cierre de sesión");
+        localStorage.removeItem("user");
+        window.location.href = "/html/inicio_sesion.html";
+    });
+}
 
 // -----------------------------
-// Función de ejemplo para compras
+// Render inicial
 // -----------------------------
-function comprarJuego(nombreJuego) {
-    addActividad(`Compró el juego: ${nombreJuego}`);
-}
+renderActividad();
+renderCompras();
+renderProductosVistos();
