@@ -19,7 +19,7 @@
     <title>Mi perfil</title>
 </head>
 
-<body>
+<body class="profile-ver-mi-perfil">
     <div class="profileeditarperfil">
         <div id="navbarContainer"></div>
 
@@ -28,12 +28,13 @@
             <img id="perfilImagen" src="img.jpg" alt="perfil" style="width:100%">
             <h1 id="username"></h1>
             <p class="title" id="useremail">jhon@example.com</p>
-            <p>Harvard University</p>
-            <a href="#"><i class="fa fa-dribbble"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <p><button>Contact</button></p>
+            <ul>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </ul>
+
+            <p><a href="../html/editarperfil.html" class="btn">Editar perfil</a></p>
             <div class="mt-3">
                 <label for="cambiarFoto" class="form-label">Cambiar foto de perfil:</label>
                 <input type="file" id="cambiarFoto" accept="image/*">
