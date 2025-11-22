@@ -1,8 +1,14 @@
-/* stylesheet-perfil.css */
-
-/* Fondo del main */
+body,
+html {
+    height: 100%;
+    margin: 0;
+} 
 body{
     background: url("/img/img-perfil.jpg");
+    min-height: 100vh; /* altura restante excluyendo navbar y footer */
+       display: flex;
+    flex-direction: column;
+    margin-top: 80px;
 }
 
 
@@ -10,8 +16,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 160px); /* altura restante excluyendo navbar y footer */
-    padding: 2rem 0;
     background: transparent; /* mantiene transparencia */
 }
 
@@ -83,3 +87,7 @@ main {
     font-size: 14px;
 }
 
+:root {
+    --electric-blue: #1E90FF;
+    --neon-green: #39FF14;
+}

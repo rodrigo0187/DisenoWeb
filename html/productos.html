@@ -7,13 +7,13 @@
     <title>Tienda Gamer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
-
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/search.css">
 
     <!-- CSS personalizado de productos -->
     <link rel="stylesheet" href="../css/stylesheet-productos.css" />
@@ -27,48 +27,9 @@
 
 
 
-<body>
+<body class="profileproductos">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top ">
-      <div class="container-fluid">
-          <img src="../img/icon/LOGO.ico" alt="Avatar Logo" style="width: 100px" class="rounded-pill" />
-          <a class="navbar-brand" style="padding-left: 1%" href="../html/index.html">Level-up Gamer | Productos</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-
-    <!-- Links de Navbar -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item mx-1">
-          <a class="nav-link" href="../html/index.html">Home</a>
-        </li>
-        <li class="nav-item mx-1">
-          <a class="nav-link" href="../html/productos.html">Productos</a>
-        </li>
-        <li class="nav-item mx-1">
-          <a class="nav-link" href="../html/formularioSoporte.html">Soporte</a>
-        </li>
-        <li class="nav-item mx-1">
-          <a class="nav-link" href="../html/blog.html">Blogs</a>
-        </li>
-        <li class="nav-item mx-1">
-          <a class="nav-link" href="../html/sobre-nosotros.html">Sobre Nosotros</a>
-        </li>
-
-        <li class="nav-item mx-1">
-          <a class="nav-link" href="../html/inicio-registro.html">Registro</a>
-        </li>
-        <li class="nav-item mx-1">
-          <a class="nav-link" href="../html/inicio_sesion.html">Iniciar sesión</a>
-        </li>
-        <!-- Cart -->
-        <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
-          🛒 Carrito (<span id="cart-count">0</span>)
-      </button>
-      </ul>
-</nav>
-    
+    <div id="navbarContainer"></div>
 
     <!-- Sección de hero -->
     <section class="hero-section">
@@ -80,6 +41,7 @@
         </div>
 
     </section>
+
 
     <!-- SECCIÓN CATEGORÍAS -->
     <div class="bg-gamer py-3 ">
@@ -117,53 +79,13 @@
 
 
     <!-- Footer -->
-    <footer class="footer mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5><i class="bi bi-controller"></i>Level-Up</h5>
-                    <p>Tu tienda de confianza para productos gaming de la más alta calidad.</p>
-                </div>
-
-                <div class="col-md-4">
-                    <h5>Enlaces rápidos</h5>
-                    <ul class="footer-links">
-                        <li><a href="../html/index.html" class="none">Home</a></li>
-                        <li><a href="../html/productos.html" class="none">Productos</a></li>
-                        <li><a href="../html/sobre-nosotros.html" class="none">Sobre Nosotros</a></li>
-                        <li><a href="../html/blogs.html" class="none">Contacto</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-                    <h5>Contacto</h5>
-                    <ul class="footer-links">
-                        <li><a href="https://maps.app.goo.gl/LA3bMz4KLmiopUho9" class="bi bi-geo-alt-fill"> Av. Paicaví
-                                3280,
-                                Concepción,Chile</a></li>
-                        <li><a href="mailto:999leveluptienda@gmail.com" class="bi bi-envelope-at-fill">
-                                999leveluptienda@gmail.com</a>
-                        </li>
-                        <li><a href="tel:+56912345678" class="bi bi-telephone-fill"> +56 9 1234 5678</a></li>
-                        <li><a href="https://www.instagram.com/999leveluptienda" class="bi bi-instagram"> Instagram</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <hr class="mt-4">
-                <div class="text-center">
-                    <small>&copy; 2025 Level-Up. Todos los derechos reservados</small>
-                    <ul class="list-inline mt-2">
-                        <li class="list-inline-item"><a href="../html/politica-y-privacidad.html"
-                                class="text-white me-3">Privacidad</i></a></li>
-                        <li class="list-inline-item"><a href="../html/terminos-y-condiciones.html"
-                                class="text-white me-3">Terminos</i></a></li>
-                </div>
-            </div>
-    </footer>
+    <div id="footerContainer"></div>
+    <!--  -->
 
     <!-- JS -->
     <script src="../js/carrito.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

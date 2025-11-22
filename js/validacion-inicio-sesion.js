@@ -1,43 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
-  if (!form) return; // seguridad: salir si no hay formulario
-
+  if (!form) return;
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // evitar envío real
+    event.preventDefault();
 
-    //input desde html
     const usernameInput = (form.email?.value || "").trim();
     const passwordInput = (form.psw?.value || "").trim();
-
-    // ======== VALIDACIÓN DE NEGOCIO =========
 
     if (!usernameInput || !passwordInput) {
       alert("Por favor completa todos los campos.");
       return;
     }
 
-    // Ejemplo: exigir mínimo 4 y máximo 10 caracteres (ajusta si quieres otra regla)
-    if (passwordInput.length < 4 || passwordInput.length > 10) {
+    if (passwordInput.length < 6 || passwordInput.length > 10) {
       alert("La contraseña debe tener entre 6 y 10 caracteres.");
       return;
     }
-    // buscar en el localstorage
+
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     const usuarioValido = usuarios.find(u => u.email === usernameInput && u.psw === passwordInput);
 
     if (usuarioValido) {
       const nombreFormateado = usuarioValido.nombre.charAt(0).toUpperCase() + usuarioValido.nombre.slice(1);
-      usuarioValido.nombre = nombreFormateado; // actualizar objeto
-      localStorage.setItem("user", JSON.stringify(usuarioValido));
+      // guardar el rol usuario
+      localStorage.setItem("usuarioLogeado", nombreFormateado);
+      // guarda al rol administrador
+      localStorage.setItem("rolUsuario", usuarioValido.role || "user");
 
       alert(`Bienvenido ${nombreFormateado}`);
-      window.location.href = "perfil.html";
+      if (usuarioValido.role === "admin") {
+        window.location.href = "../html/perfilAdmin.html";
+      }
+      else {
+        window.location.href = "../html/perfil.html";
+      }
     } else {
-      alert("Usuario o contrasenas incorrectas.");
+      alert("!Usuario o contrasena invalidas")
     }
-  });
-  // Cancel button opcional
+
+  }
+  );
+
   const cancelBtn = document.querySelector(".cancelbtn");
   if (cancelBtn) {
     cancelBtn.addEventListener("click", (e) => {

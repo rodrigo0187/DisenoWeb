@@ -10,9 +10,14 @@ body {
   background-size: cover;
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding-top: 80px;
+  height: 100%;
 }
 
 form {
+  margin:0;
+  padding:0;
   background: rgba(52, 58, 64, 0.7); /* 70% opaco, 30% transparente */
   padding: 30px;
   border-radius: 15px;
@@ -62,4 +67,8 @@ form button:hover {
   font-size: 0.9rem;
   margin-top: 5px;
   text-align: center;
+}
+:root {
+    --electric-blue: #1E90FF;
+    --neon-green: #39FF14;
 }

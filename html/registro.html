@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio registro</title>
+  <!-- hoja de estilo boostrap y js -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Latest compiled JavaScript -->
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="../css/stylesheet-inicio-registro.css" />
+  <!-- style navbar -->
+  <link rel="stylesheet" href="../css/stylesheet-nav-bar-custom.css">
+  <!-- CSS personalizado de footer -->
+  <link rel="stylesheet" href="../css/stylesheet-footer.css" />
+  <!-- CSS personalizado de navbar -->
+  <link rel="stylesheet" href="../css/stylesheet-navbar.css" />
+
+</head>
+
+<body class="profileregistro">
+  <div class="page-container">
+    <!-- Navbar components-->
+    <div id="navbarContainer"></div>
+    <!--  -->
+    <div class="register-container">
+      <form id="registerForm">
+        <h1>Regístrate</h1>
+        <p>Completa este formulario para crear tu cuenta</p>
+        <p id="asterisco">Los campos con asterisco (*) son obligatorios.</p>
+
+        <label for="nombre"><b>Nombre (*)</b></label>
+        <input type="text" id="nombre" placeholder="Jhon Doe" name="nombre" required>
+        <small id="error-nombre" class="text-danger"></small>
+
+        <label for="email"><b>Email (*)</b></label>
+        <input type="email" id="email" placeholder="JhonDoe@dominio.cl" name="email" required>
+        <small id="error-email" class="text-danger"></small>
+
+        <label for="repeat-email"><b>Repite Email (*)</b></label>
+        <input type="email" id="repeat-email" placeholder="JhonDoe@dominio.cl" name="repeat-email" required>
+        <small id="error-repeat-email" class="text-danger"></small>
+
+        <label for="telefono"><b>Teléfono</b></label>
+        <input type="tel" id="telefono" placeholder="+569-1234-5678" name="telefono">
+        <small id="error-telefono" class="text-danger"></small>
+
+        <label for="psw"><b>Contraseña (*)</b></label>
+        <input type="password" id="psw" placeholder="******" name="psw" required>
+        <small id="error-psw" class="text-danger"></small>
+
+        <label for="psw-repeat"><b>Repite Contraseña (*)</b></label>
+        <input type="password" id="psw-repeat" placeholder="******" name="psw-repeat" required>
+        <small id="error-psw-repeat" class="text-danger"></small>
+
+        <p id="msgExito" class="text-success mt-1"></p>
+
+        <div class="clearfix mt-1">
+          <button type="button" class="cancelbtn">Cancelar</button>
+          <button type="submit" class="signupbtn">Ingresar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- footer components -->
+  <div id="footerContainer"></div>
+
+  <!-- scripts -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/validacion-registro.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/navbar.js"></script>
+</body>
+
+</html>
